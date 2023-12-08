@@ -1,0 +1,29 @@
+{
+  "command": {
+    "activate": "Ctrl+P",
+    "deactivate": "Esc",
+    "sniper-mode": "Ctrl",
+    "sniper-mode-wheel": "Ctrl",
+    "move-up": "R",
+    "move-down": "I",
+    "move-left": "N",
+    "move-right": "O",
+    "wheel-up": "D",
+    "wheel-down": "E",
+    "wheel-left": "Left",
+    "wheel-right": "Right",
+    "click-left": "S",
+    "click-middle": "S+T",
+    "click-right": "T"
+  },
+  "data": {
+    "cursor-sniper-speed": 5,
+    "wheel-sniper-speed": 5,
+    "cursor-acceleration": 3,
+    "cursor-max-speed": 50,
+    "wheel-acceleration": 5,
+    "wheel-max-speed": 180,
+    "key-timeout": 150,
+    "show-overlay": true
+  }
+}
