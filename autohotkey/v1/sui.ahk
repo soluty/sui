@@ -4,7 +4,7 @@
 ;!c::
 ;ToolTip, cool sui!!!!!!!
 ;return
-; CapsLock映射为Esc和Alt
+; CapsLock map to Esc/Alt
 CapsLock::Send {Esc}
 CapsLock & a::Send !a
 CapsLock & b::Send !b
@@ -117,3 +117,68 @@ AppsKey & PgDn::Send ^!{PgDn}
 AppsKey & Home::Send ^!{Home}
 AppsKey & End::Send ^!{End}
 
+; sui backup interface
+#If WinActive("ahk_exe chrome.exe")
+ or WinActive("ahk_exe firefox.exe")
+ or WinActive("ahk_exe msedge.exe")
+ or WinActive("ahk_exe vivaldi.exe")
+ or WinActive("ahk_exe brave.exe")
+^b::
+ctrl_b_var := true
+Sleep 1000
+ctrl_b_var := false
+return
+#If (ctrl_b_var)
+  q::
+  ctrl_b_var := false
+  Send ^{F4}
+  return
+  r::
+  ctrl_b_var := false
+  Send ^{F5}
+  return
+#If
+return
+#If
+
+#IfWinActive, ahk_exe Code.exe
+^b::
+ctrl_b_var := true
+Sleep 1000
+ctrl_b_var := false
+return
+#If (ctrl_b_var)
+  .::
+  ctrl_b_var := false
+  Send ^+p
+  return
+#If
+#IfWinNotActive
+
+
+; sui fallthrough interface
+fall_through := false
+$^v::
+if(fall_through){
+  Send ^v
+  return
+}
+ToolTip press c-v...
+return
+
+$^f::
+if(fall_through){
+  Send ^f
+  return
+}
+fall_through := true
+ToolTip press c-f...now you enter fallthrough mode.
+;Send ^f
+Sleep 1000
+fallthrough := false
+return
+
+$^+f::
+fall_through := false
+Send ^+f
+return
