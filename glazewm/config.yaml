@@ -1,0 +1,72 @@
+gaps:
+  inner_gap: 10
+  outer_gap: 10
+general:
+  show_floating_on_top: false
+  cursor_follows_focus: false
+  floating_window_move_amount: "100px"
+bar:
+  height: "20px"
+  position: "top"
+  opacity: 1.0
+  background: "#20242cc4"
+  foreground: "#ffffff"
+  font_family: "Segoe UI"
+  font_size: "13px"
+  padding: "0px 6px"
+  components_left:
+    - type: "workspaces"
+      focused_workspace_background: "#ffffff33"
+      displayed_workspace_background: "#00000033"
+      default_workspace_background: "transparent"
+  components_right:
+    - type: "tiling direction"
+      background: "#ffffff33"
+      margin: "0 4px"
+      padding: "0 8px"
+    - type: "binding mode"
+      background: "#ffffff33"
+      margin: "0 4px 0 0"
+      padding: "0 8px"
+    - type: "clock"
+      time_formatting: "hh:mm tt  ddd MMM d"
+      margin: "0 0 0 10px"
+workspaces:
+  - name: "editor"
+  - name: "browser"
+
+window_rules:
+  - command: "move to workspace browser"
+    match_process_name: "chrome"
+  - command: "move to workspace editor"
+    match_process_name: "wezterm-gui"
+  - command: "set floating"
+    match_class_name: "#32770"
+
+binding_modes:
+  - name: "launch"
+    keybindings:
+      - command: "binding mode none"
+        bindings: ["Escape"]
+      - command: "binding mode none"
+        bindings: ["Control+OemOpenBrackets"]
+      - commands: ["exec cmd.exe", "binding mode none"]
+        bindings: ["L"]
+      - commands: ["exec %SUI_ROOT%/glazewm/launcher.bat", "binding mode none"]
+        bindings: ["W"]
+      - commands: ["exec %SUI_ROOT%/glazewm/launcher.bat", "binding mode none"]
+        bindings: ["F"]
+      - commands: ["tiling direction horizontal", "exec %SUI_ROOT%/glazewm/launcher.bat", "binding mode none"]
+        bindings: ["H"]
+      - commands: ["tiling direction vertical", "exec %SUI_ROOT%/glazewm/launcher.bat", "binding mode none"]
+        bindings: ["V"]
+      - commands: ["reload config", "binding mode none"]
+        binding: "R"
+      - commands: ["reload config", "binding mode none"]
+        binding: "C"
+      - commands: ["exec chrome.exe", "binding mode none"]
+        binding: "Alt+C"
+
+keybindings:
+  - command: "binding mode launch"
+    binding: "Control+L"

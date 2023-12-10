@@ -1,0 +1,1 @@
+%SUI_ROOT%\glazewm\wrun.exe cmd /c %USERPROFILE%\AppData\Local\Programs\utools\uTools.exe

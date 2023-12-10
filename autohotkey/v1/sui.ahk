@@ -300,3 +300,15 @@ return
 #If
 #If
 
+
+^l::
+ctrl_l_var := true
+Sleep 1000
+ctrl_l_var := false
+return
+#If (ctrl_l_var)
+:*:nc::
+  ctrl_l_var := false
+  Run, cmd.exe
+return
+#If
