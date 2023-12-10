@@ -1,0 +1,38 @@
+set show-mode-in-prompt on
+set show-all-if-ambiguous on
+set completion-ignore-case on
+set emacs-mode-string ""
+$if mode=emacs
+"\C-e":
+"\C-es": backward-kill-line
+"\C-et": kill-line
+"\C-eu": undo
+"\C-eU": redo
+"\C-ed": kill-whole-line
+"\C-en": unix-word-rubout
+"\C-eo": kill-word
+# TODO https://stackoverflow.com/questions/59771639/how-do-i-edit-current-shell-command-without-executing-it
+"\C-ee": edit-and-execute-command
+"\C-ey": kill-line
+"\C-ep": kill-line
+"\C-ef": "\C-]"
+"\C-eF": "\C-M-]"
+
+# Home
+"\e[1~": beginning-of-line
+# End
+"\e[4~": end-of-line
+# Delete
+"\e[3~": delete-char
+# Insert
+"\e[2~": quoted-insert
+
+# for sui unregular use
+"\C-N": unix-word-rubout
+"\C-O": kill-word
+"\C-S": shell-backward-word
+"\C-T": shell-forward-word
+$endif
+
+$if Bash
+$endif
