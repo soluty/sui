@@ -172,10 +172,11 @@ if(fall_through){
   return
 }
 fall_through := true
-ToolTip press c-f...now you enter fallthrough mode.
-;Send ^f
-Sleep 1000
-fallthrough := false
+SetTimer, FallThroughTimer, -1000
+return
+FallThroughTimer:
+  fall_through := false
+  SetTimer, FallThroughTimer, Off
 return
 
 $^+f::
