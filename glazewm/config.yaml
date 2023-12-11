@@ -68,7 +68,22 @@ binding_modes:
         binding: "C"
       - commands: ["exec cmd.exe", "binding mode none"]
         binding: "Alt+C"
-
+  - name: "quit"
+    keybindings:
+      - command: "binding mode none"
+        bindings: ["Escape"]
+      - command: "binding mode none"
+        bindings: ["Control+OemOpenBrackets"]
+      - commands: ["close", "binding mode none"]
+        binding: "Q"
+      - commands: ["close", "binding mode none"]
+        binding: "T"
+      - commands: ["close", "binding mode none"]
+        binding: "W"
+      - commands: ["exit wm"]
+        binding: "A"
 keybindings:
   - command: "binding mode launch"
     binding: "Control+L"
+  - command: "binding mode quit"
+    binding: "Control+Q"

@@ -1,4 +1,6 @@
 #SingleInstance Force
+EnvGet, HOME, USERPROFILE
+EnvGet, SUI_ROOT, SUI_ROOT
 
 ;uncommont this to see what will alt+c do
 ;!c::
@@ -311,5 +313,44 @@ return
 :*:nc::
   ctrl_l_var := false
   Run, cmd.exe
+return
+#If
+
+; quit interface
+^q::
+ctrl_q_var := true
+Sleep 1000
+ctrl_q_var := false
+return
+#If (ctrl_q_var)
+  .::
+  ctrl_q_var := false
+  RunWait, "%HOME%\AppData\Local\Programs\utools\uTools.exe"
+  Send kill{Space}{Space}
+  return
+  o::
+  ctrl_q_var := false
+  Run, python "%SUI_ROOT%\sui\not_implement.py"
+  return
+  n::
+  ctrl_q_var := false
+  Run, python "%SUI_ROOT%\sui\not_implement.py"
+  return
+  q::
+  ctrl_q_var := false
+  Send ^qq
+  return
+  t::
+  ctrl_q_var := false
+  Send ^qt
+  return
+  w::
+  ctrl_q_var := false
+  Send ^qw
+  return
+  a::
+  ctrl_q_var := false
+  Send ^qa
+  return
 return
 #If

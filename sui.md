@@ -90,20 +90,33 @@ leader键
 
 ## 打开资源接口(launch/open)
 
-| 功能描述                                 | 软件的类型 | 是否必须 | norman布局(rinodest) | qwert布局      |
-| --------------                           | ---------- | -------- | --------------       | -------------- |
-| 打开最常见的资源                         | all        | 是       | (leader+l)l          |                |
-| 新建垂直窗口打开资源(vertical)           | all        | 是       | (leader+l)v          |                |
-| 新建水平窗口打开资源(horizontal)         | all        | 是       | (leader+l)h          |                |
-| 新建浮动窗口打开资源(float)              | all        | 是       | (leader+l)f          |                |
-| 新建窗口打开资源(可以输入要打开什么资源) | all        | 是       | (leader+l)w          |                |
-| 新建tab打开资源(可以输入要打开什么资源)  | all        | 是       | (leader+l)t          |                |
-| 刷新当前窗口(重新加载窗口)               | all        | 是       | (leader+l)r          |                |
-| 强制重新加载窗口(无需确认)               | all        | 否       | (leader+l)R          |                |
-| 重新加载配置(config)                     | all        | 是       | (leader+l)c          |                |
-| 打开命令菜单                             | all        | 是       | (leader+.)           |                |
-| 创建新的资源                             | all        | 否       | (leader+l)n(字母键)  |                |
-| 其它快捷操作(自己定义的一些操作)         | all        | 是       | (leader+l).(字母键)  |                |
-| 加载session                              | all        | 否       | (leader+l)s          |                |
+| 功能描述                                 | 软件的类型 | 是否必须 | norman布局(rinodest)                | qwert布局      |
+| --------------                           | ---------- | -------- | --------------                      | -------------- |
+| 打开最常见的资源                         | all        | 是       | (leader+l)l or (leader+l)(leader+l) |                |
+| 新建垂直窗口打开资源(vertical)           | all        | 是       | (leader+l)v                         |                |
+| 新建水平窗口打开资源(horizontal)         | all        | 是       | (leader+l)h                         |                |
+| 新建浮动窗口打开资源(float)              | all        | 是       | (leader+l)f                         |                |
+| 新建窗口打开资源(可以输入要打开什么资源) | all        | 是       | (leader+l)w                         |                |
+| 新建tab打开资源(可以输入要打开什么资源)  | all        | 是       | (leader+l)t                         |                |
+| 刷新当前窗口(重新加载窗口)               | all        | 是       | (leader+l)r                         |                |
+| 强制重新加载窗口(无需确认)               | all        | 否       | (leader+l)R                         |                |
+| 重新加载配置(config)                     | all        | 是       | (leader+l)c                         |                |
+| 打开命令菜单                             | all        | 是       | (leader+.)                          |                |
+| 创建新的资源                             | all        | 否       | (leader+l)n(字母键)                 |                |
+| 其它快捷操作(自己定义的一些操作)         | all        | 是       | (leader+l).(字母键)                 |                |
+| 加载session                              | all        | 否       | (leader+l)s                         |                |
 
+
+## 关闭资源接口(quit)
+
+| 功能描述                                                           | 是否必须 | norman布局(rinodest)                | qwert布局      |
+| --------------                                                     | -------- | --------------                      | -------------- |
+| 关闭光标所在窗口(这个最常见,所以安排一个最容易按的)                | 是       | (leader+q)q or (leader+q)(leader+q) |                |
+| 关闭光标所在窗口                                                   | 是       | (leader+q)w                         |                |
+| 关闭光标所在 tab                                                   | 是       | (leader+q)t                         |                |
+| 关闭除了光标所在的窗口以外的窗口(only)                             | 是       | (leader+q)o                         |                |
+| 关闭除了光标所在的 tab 以外的 tab (only第二个字符)                 | 是       | (leader+q)n                         |                |
+| 关闭所有,退出程序                                                  | 是       | (leader+q)a                         |                |
+| 和对应的小写字母的功能一样, 只不过即使后台有未完成的工作也不用确认 | 是       | (leader+q)(QWTONA)                  |                |
+| 可搜索的关闭窗口                                                   | 是       | (leader+q).                         |                |
 

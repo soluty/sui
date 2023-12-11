@@ -2,6 +2,8 @@
 setlocal enabledelayedexpansion
 set xdir=%~dp0
 
+setx SUI_ROOT %xdir%
+
 REM exec sub dirs install.bat
 for /f %%i in ('dir /b /ad "%xdir%"') do (
   if exist "%xdir%\%%i\install.bat" (
