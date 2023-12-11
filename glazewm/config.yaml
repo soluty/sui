@@ -52,6 +52,8 @@ binding_modes:
         bindings: ["Control+OemOpenBrackets"]
       - commands: ["exec cmd.exe", "binding mode none"]
         bindings: ["L"]
+      - commands: ["exec cmd.exe", "binding mode none"]
+        bindings: ["Control+L"]
       - commands: ["exec %SUI_ROOT%/glazewm/launcher.bat", "binding mode none"]
         bindings: ["W"]
       - commands: ["exec %SUI_ROOT%/glazewm/launcher.bat", "binding mode none"]
@@ -64,7 +66,7 @@ binding_modes:
         binding: "R"
       - commands: ["reload config", "binding mode none"]
         binding: "C"
-      - commands: ["exec chrome.exe", "binding mode none"]
+      - commands: ["exec cmd.exe", "binding mode none"]
         binding: "Alt+C"
 
 keybindings:
