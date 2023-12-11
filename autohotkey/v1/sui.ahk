@@ -354,3 +354,11 @@ return
   return
 return
 #If
+
+; use in glazewm window manager, if your manager is komorebi, uncommont this
+^Up::
+Send ^k^{Left}^{Right}
+return
+^Down::
+Send ^k^{Left}^{Right}
+return

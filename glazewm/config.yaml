@@ -87,3 +87,21 @@ keybindings:
     binding: "Control+L"
   - command: "binding mode quit"
     binding: "Control+Q"
+  - commands: ["focus left"]
+    bindings: ["Control+N"]
+  - commands: ["focus right"]
+    bindings: ["Control+O"]
+  - commands: ["focus up"]
+    bindings: ["Control+R"]
+  - commands: ["focus down"]
+    bindings: ["Control+I"]
+  - commands: ["focus workspace prev"]
+    bindings: ["Control+Left"]
+  - commands: ["focus workspace next"]
+    bindings: ["Control+Right"]
+  - commands: ["toggle focus mode"]
+    bindings: ["Control+K"]
+  - commands: ["toggle focus mode"]
+    bindings: ["Control+Down"]
+  - commands: ["toggle focus mode"]
+    bindings: ["Control+Up"]
