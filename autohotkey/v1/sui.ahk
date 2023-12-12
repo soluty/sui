@@ -1,6 +1,7 @@
 #SingleInstance Force
 EnvGet, HOME, USERPROFILE
 EnvGet, SUI_ROOT, SUI_ROOT
+EnvGet, SystemRoot, SystemRoot
 
 ;uncommont this to see what will alt+c do
 ;!c::
@@ -338,6 +339,12 @@ return
   return
   q::
   ctrl_q_var := false
+  if WinActive("ahk_exe SnippingTool.exe")
+  || WinActive("ahk_exe ScreenToGif.exe")
+  {
+    Send !{F4}
+    return
+  }
   Send ^qq
   return
   t::
@@ -362,3 +369,89 @@ return
 ^Down::
 Send ^k^{Left}^{Right}
 return
+
+
+; copy interface in window manager
+GetWindowInfo(hwnd) {
+  WinGetTitle, title, ahk_id %hwnd%
+  WinGetClass, class, ahk_id %hwnd%
+  WinGet, processPath, ProcessPath, ahk_id %hwnd%
+  WinGet, processName, ProcessName, ahk_id %hwnd%
+  WinGetPos, x, y, width, height, ahk_id %hwnd%
+  info = 窗口标题：%title%`n窗口类名：%class%`n窗口位置：%x%, %y%`n窗口尺寸：%width%x%height%`n所属进程：%processName%`n进程路径：%processPath%
+  Clipboard := info
+}
+
+SendHttpGet(url) {
+  req := ComObjCreate("Msxml2.XMLHTTP")
+  req.open("GET", url, true)
+  req.send()
+  ;Run, %comspec% /c xh get %url%, , Hide
+}
+
+^y::
+ctrl_y_var := true
+Sleep 1000
+ctrl_y_var := false
+return
+#If (ctrl_y_var)
+  y::
+  ctrl_y_var := false
+  Run "%SUI_ROOT%\sui\bin\ScreenCapture.exe"
+  return
+  a::
+  ctrl_y_var := false
+  Run, "%SystemRoot%\system32\SnippingTool.exe"
+  Sleep 500
+  Send !ms
+  return
+  r::
+  ctrl_y_var := false
+  Run, "%SystemRoot%\system32\SnippingTool.exe"
+  Sleep 500
+  Send !mr
+  return
+  .::
+  ctrl_y_var := false
+  Run, "%SystemRoot%\system32\SnippingTool.exe"
+  Sleep 500
+  Send !mf
+  return
+  w::
+  ctrl_y_var := false
+  Run, "%SystemRoot%\system32\SnippingTool.exe"
+  Sleep 500
+  Send !mw
+  return
+  *n::
+  ctrl_y_var := false
+  if (GetKeyState("Shift","P")){
+    WinGet, processPath, ProcessPath, ahk_id %hwnd%
+    Clipboard := processPath
+    return
+  }
+  WinGet, processNamew, ProcessName, A
+  Clipboard := processNamew
+  return
+  i::
+  ctrl_y_var := false
+  WinGetActiveTitle, activeTitle
+  WinGet, activeHwnd, ID, %activeTitle%
+  GetWindowInfo(activeHwnd)
+  return
+  g:: ; neep ScreenToGif run in daemon and set start shortcut
+  ctrl_y_var := false
+  Send, ^{F12}
+  return
+  p::
+  ctrl_y_var := false
+  ctrl_yp_var := true
+  return
+#If
+#If ctrl_yp_var
+  t:: ; neet pot run in daemon
+  ctrl_yp_var := false
+  SendHttpGet("http://127.0.0.1:60828/ocr_recognize?screenshot=true")
+  return
+#If
+
