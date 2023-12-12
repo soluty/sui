@@ -82,11 +82,21 @@ binding_modes:
         binding: "W"
       - commands: ["exit wm"]
         binding: "A"
+  - name: "goto"
+    keybindings:
+      - command: "binding mode none"
+        bindings: ["Escape"]
+      - command: "binding mode none"
+        bindings: ["Control+OemOpenBrackets"]
+      - commands: ["exec cmd.exe", "binding mode none"]
+        binding: "T"
 keybindings:
   - command: "binding mode launch"
     binding: "Control+L"
   - command: "binding mode quit"
     binding: "Control+Q"
+  - command: "binding mode goto"
+    binding: "Control+G"
   - commands: ["focus left"]
     bindings: ["Control+N"]
   - commands: ["focus right"]
