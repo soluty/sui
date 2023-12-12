@@ -33,7 +33,15 @@ bar:
       margin: "0 0 0 10px"
 workspaces:
   - name: "editor"
+    keep_alive: true
   - name: "browser"
+    keep_alive: true
+  - name: "im"
+    keep_alive: true
+  - name: "terminal"
+    keep_alive: true
+  - name: "doc"
+    keep_alive: true
 
 window_rules:
   - command: "move to workspace browser"
@@ -90,11 +98,111 @@ binding_modes:
         bindings: ["Control+OemOpenBrackets"]
       - commands: ["exec cmd.exe", "binding mode none"]
         binding: "T"
+  - name: "size"
+    keybindings:
+      - command: "binding mode none"
+        bindings: ["Escape"]
+      - command: "binding mode none"
+        bindings: ["Control+OemOpenBrackets"]
+      - command: "resize height +2%"
+        bindings: ["R", "Up"]
+      - command: "resize height -2%"
+        bindings: ["I", "Down"]
+      - command: "resize width -2%"
+        bindings: ["N", "Left"]
+      - command: "resize width +2%"
+        bindings: ["O", "Right"]
+      - commands: ["toggle maximized", "binding mode none"]
+        bindings: ["M"]
+      - commands: ["toggle maximized", "binding mode none"]
+        bindings: ["Z"]
+      - commands: ["set minimized", "binding mode none"]
+        bindings: ["H"]
+      - commands: ["binding mode none", "exec python %SUI_ROOT%/sui/not_implement.py"]
+        bindings: ["W"]
+      - commands: ["binding mode none"]
+        bindings: ["T"]
+  - name: "move"
+    keybindings:
+      - command: "binding mode none"
+        bindings: ["Escape", "Enter"]
+      - command: "binding mode none"
+        bindings: ["Control+OemOpenBrackets"]
+      - commands: ["move left", "binding mode none"]
+        bindings: ["N"]
+      - commands: ["move right", "binding mode none"]
+        bindings: ["O"]
+      - commands: ["move up", "binding mode none"]
+        bindings: ["R"]
+      - commands: ["move down", "binding mode none"]
+        bindings: ["I"]
+      - commands: ["move workspace left", "binding mode none"]
+        bindings: ["Left"]
+      - commands: ["move workspace right", "binding mode none"]
+        bindings: ["Right"]
+      - commands: ["toggle floating", "binding mode none"]
+        bindings: ["F"]
+      - commands: ["set floating", "binding mode none"]
+        bindings: ["Shift+F"]
+  - name: "tabto"
+    keybindings:
+      - command: "binding mode none"
+        bindings: ["Escape"]
+      - command: "binding mode none"
+        bindings: ["Control+OemOpenBrackets"]
+      - commands: ["focus workspace editor", "binding mode none"]
+        bindings: ["E"]
+      - commands: ["focus workspace browser", "binding mode none"]
+        bindings: ["B"]
+      - commands: ["focus workspace terminal", "binding mode none"]
+        bindings: ["T"]
+      - commands: ["focus workspace im", "binding mode none"]
+        bindings: ["I"]
+      - commands: ["focus workspace doc", "binding mode none"]
+        bindings: ["D"]
+  - name: "arrive"
+    keybindings:
+      - command: "binding mode none"
+        bindings: ["Escape"]
+      - command: "binding mode none"
+        bindings: ["Control+OemOpenBrackets"]
+      - commands: ["move to workspace editor", "binding mode none"]
+        bindings: ["E"]
+      - commands: ["move to workspace browser", "binding mode none"]
+        bindings: ["B"]
+      - commands: ["move to workspace terminal", "binding mode none"]
+        bindings: ["T"]
+      - commands: ["move to workspace im", "binding mode none"]
+        bindings: ["I"]
+      - commands: ["move to workspace doc", "binding mode none"]
+        bindings: ["D"]
+  - name: "goto"
+    keybindings:
+      - command: "binding mode none"
+        bindings: ["Escape"]
+      - command: "binding mode none"
+        bindings: ["Control+OemOpenBrackets"]
+      - commands: ["focus workspace recent", "binding mode none"]
+        bindings: ["N"]
+      - commands: ["focus workspace recent", "binding mode none"]
+        bindings: ["O"]
+      - commands: ["binding mode none", "exec %SUI_ROOT%/sui/not_implement.bat"]
+        bindings: ["."]
 keybindings:
   - command: "binding mode launch"
     binding: "Control+L"
   - command: "binding mode quit"
     binding: "Control+Q"
+  - command: "binding mode goto"
+    binding: "Control+G"
+  - command: "binding mode move"
+    binding: "Control+M"
+  - command: "binding mode size"
+    binding: "Control+S"
+  - command: "binding mode arrive"
+    binding: "Control+A"
+  - command: "binding mode tabto"
+    binding: "Control+T"
   - command: "binding mode goto"
     binding: "Control+G"
   - commands: ["focus left"]

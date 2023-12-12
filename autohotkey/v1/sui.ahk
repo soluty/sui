@@ -455,3 +455,23 @@ return
   return
 #If
 
+~^s::
+ctrl_s_var := true
+Sleep 1000
+ctrl_s_var := false
+return
+#If (ctrl_s_var)
+  u::
+    SoundGet, currentVolume
+    newVolume := currentVolume + 5
+    SoundSet, %newVolume%
+  return
+  d::
+    SoundGet, currentVolume
+    newVolume := currentVolume - 5
+    SoundSet, %newVolume%
+  return
+  s::
+    SoundSet, 50
+  return
+#If

@@ -90,21 +90,25 @@ leader键
 
 ## 打开资源接口(launch/open)
 
-| 功能描述                                 | 软件的类型 | 是否必须 | norman布局(rinodest)                | qwert布局      |
-| --------------                           | ---------- | -------- | --------------                      | -------------- |
-| 打开最常见的资源                         | all        | 是       | (leader+l)l or (leader+l)(leader+l) |                |
-| 新建垂直窗口打开资源(vertical)           | all        | 是       | (leader+l)v                         |                |
-| 新建水平窗口打开资源(horizontal)         | all        | 是       | (leader+l)h                         |                |
-| 新建浮动窗口打开资源(float)              | all        | 是       | (leader+l)f                         |                |
-| 新建窗口打开资源(可以输入要打开什么资源) | all        | 是       | (leader+l)w                         |                |
-| 新建tab打开资源(可以输入要打开什么资源)  | all        | 是       | (leader+l)t                         |                |
-| 刷新当前窗口(重新加载窗口)               | all        | 是       | (leader+l)r                         |                |
-| 强制重新加载窗口(无需确认)               | all        | 否       | (leader+l)R                         |                |
-| 重新加载配置(config)                     | all        | 是       | (leader+l)c                         |                |
-| 打开命令菜单                             | all        | 是       | (leader+.)                          |                |
-| 创建新的资源                             | all        | 否       | (leader+l)n(字母键)                 |                |
-| 其它快捷操作(自己定义的一些操作)         | all        | 是       | (leader+l).(字母键)                 |                |
-| 加载session                              | all        | 否       | (leader+l)s                         |                |
+在文件编辑器中, 如果需要, 可以用 leader+L, 或者干脆不要这个功能
+
+| 功能描述                                     | 软件的类型 | 是否必须 | norman布局(rinodest) | qwert布局      |
+| --------------                               | ---------- | -------- | --------------       | -------------- |
+| 打开最常见的资源                             | all        | 是       | (leader+l)l          |                |
+| 新建垂直窗口打开资源(vertical)               | all        | 是       | (leader+l)v          |                |
+| 新建水平窗口打开资源(horizontal)             | all        | 是       | (leader+l)h          |                |
+| 新建浮动窗口打开资源(float)                  | all        | 是       | (leader+l)f          |                |
+| 新建窗口打开资源(可以输入要打开什么资源)     | all        | 是       | (leader+l)w          |                |
+| 新建tab打开资源(可以输入要打开什么资源)      | all        | 是       | (leader+l)t          |                |
+| 刷新当前窗口(重新加载窗口)                   | all        | 是       | (leader+l)r          |                |
+| 强制重新加载窗口(无需确认)                   | all        | 否       | (leader+l)R          |                |
+| 重新加载配置(config)                         | all        | 是       | (leader+l)c          |                |
+| 打开配置页面(用文本编辑器或者软件自带的设置) | all        | 是       | (leader+l)C          |                |
+| 打开帮助手册页面(man)                        | all        | 是       | (leader+l)(m or ?)   |                |
+| 打开命令菜单                                 | all        | 是       | (leader+.)           |                |
+| 创建新的资源                                 | all        | 否       | (leader+l)n(字母键)  |                |
+| 其它快捷操作(自己定义的一些操作)             | all        | 是       | (leader+l).(字母键)  |                |
+| 加载session                                  | all        | 否       | (leader+l)s          |                |
 
 
 ## 关闭资源接口(quit)
@@ -172,4 +176,49 @@ goto一般是直达特定的资源,那些资源可以没有打开,用当前的�
 | 焦点移动到上一个历史位置 | all      | 是       | (leader+g)小左                 |                |
 | 焦点移动到下一个历史位置 | all      | 是       | (leader+g)小右                 |                |
 | 搜索历史焦点位置         | all      | 是       | (leader+g).                    |                |
-| 焦点移动到自定义的位置   | all      | 是       | (leader+y)(t 或者不按t )(字母) |                |
+| 焦点移动到自定义的位置   | all      | 是       | (leader+g)(t 或者不按t )(字母) |                |
+
+## 窗口和tab的size接口
+
+在文件编辑器中, 如果需要, 可以用 leader+S, 或者干脆不要这个功能
+
+| 功能描述                       | 软件类型 | 是否必须 | norman布局(rinodest) | qwert布局      |
+| --------------                 | -------- | -------- | --------------       | -------------- |
+| 修改窗口大小(上移变大)         | all      | 是       | (leader+s)小上       |                |
+| 修改窗口大小(下移变小)         | all      | 是       | (leader+s)小下       |                |
+| 修改窗口大小(左移变小)         | all      | 是       | (leader+s)小左       |                |
+| 修改窗口大小(右移变大)         | all      | 是       | (leader+s)小右       |                |
+| 修改窗口大小(最大化)(maxmize)  | all      | 是       | (leader+s)m          |                |
+| 修改窗口大小(占满)(zenmode)    | all      | 是       | (leader+s)z          |                |
+| 修改窗口大小(最小化)(hidden)   | all      | 是       | (leader+s)h          |                |
+| 修改窗口名字                   | all      | 否       | (leader+s)w          |                |
+| 修改tab名字                    | all      | 否       | (leader+s)t          |                |
+| 常用的修改大小(大) 字体,声音等 | all      | 否       | (leader+s)u          |                |
+| 常用的修改大小(小)             | all      | 否       | (leader+s)d          |                |
+| 常用的修改大小(设置回来)       | all      | 否       | (leader+s)s          |                |
+
+## 窗口的move接口
+
+| 功能描述                       | 软件类型 | 是否必须 | norman布局(rinodest) | qwert布局      |
+| --------------                 | -------- | -------- | --------------       | -------------- |
+| 修改窗口位置(上移)             | all      | 是       | (leader+m)小上       |                |
+| 修改窗口位置(下移)             | all      | 是       | (leader+m)小下       |                |
+| 修改窗口位置(左移)             | all      | 是       | (leader+m)小左       |                |
+| 修改窗口位置(右移)             | all      | 是       | (leader+m)小右       |                |
+| 修改tab位置(左移)              | all      | 是       | (leader+m)左         |                |
+| 修改tab位置(右移)              | all      | 是       | (leader+m)右         |                |
+| 切换窗口浮动状态               | all      | 是       | (leader+m)f          |                |
+| 强制窗口浮动                   | all      | 是       | (leader+m)F          |                |
+
+## 窗口在tab中移动的接口arrive
+
+| 功能描述                                 | 软件类型 | 是否必须 | norman布局(rinodest)   | qwert布局      |
+| --------------                           | -------- | -------- | --------------         | -------------- |
+| 窗口移动到特定tab(左边的tab)             | all      | 是       | (leader+a)左           |                |
+| 窗口移动到特定tab(右边的tab)             | all      | 是       | (leader+a)右           |                |
+| 窗口移动到特定tab并且焦点不变(左边的tab) | all      | 是       | (leader+a)(home)       |                |
+| 窗口移动到特定tab并且焦点不变(右边的tab) | all      | 是       | (leader+a)(end)        |                |
+| 窗口移动到特定tab(按tab名字)             | all      | 是       | (leader+a)(字母键)     |                |
+| 窗口移动到特定tab并且焦点不变(按tab名字) | all      | 是       | (leader+a)(大写字母键) |                |
+| 窗口移动到特定tab(按tab编号)             | all      | 是       | (leader+a)(数字键)     |                |
+| 窗口移动到tab(通过查找tab名字)           | all      | 是       | (leader+a).            |                |
