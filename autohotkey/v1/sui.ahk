@@ -3,6 +3,42 @@ EnvGet, HOME, USERPROFILE
 EnvGet, SUI_ROOT, SUI_ROOT
 EnvGet, SystemRoot, SystemRoot
 
+global im_now := 0
+
+IME_SET(setSts, WinTitle="")
+{
+  im_now := setSts
+  ifEqual WinTitle,,  SetEnv, WinTitle, A
+  WinGet, hWnd, ID, %WinTitle%
+  DefaultIMEWnd := DllCall("imm32\ImmGetDefaultIMEWnd", Uint, hWnd, Uint)
+
+  DetectSave := A_DetectHiddenWindows
+  DetectHiddenWindows, ON
+  SendMessage 0x283, 0x006, setSts,, ahk_id %DefaultIMEWnd%
+  DetectHiddenWindows, %DetectSave%
+  Return ErrorLevel
+}
+
+~LShift up::
+  if(GetKeyState(";")) {
+    return
+  }
+  if (GetKeyState("CapsLock", "T")) {
+    SetCapsLockState, Off
+  }
+  if (WinExist("ahk_class SoPY_Comp")){
+    Send {Enter}
+  }
+  IME_SET(0)
+return
+
+~RShift::
+  if (GetKeyState("CapsLock", "T")) {
+    SetCapsLockState, Off
+  }
+  IME_SET(1)
+return
+
 ;uncommont this to see what will alt+c do
 ;!c::
 ;ToolTip, cool sui!!!!!!!
@@ -305,16 +341,58 @@ return
 #If
 
 
-^l::
+$^l::
 ctrl_l_var := true
-Sleep 1000
+im_current := im_now
+IME_SET(0)
+Sleep 500
+IME_SET(im_current)
+Sleep 500
 ctrl_l_var := false
 return
 #If (ctrl_l_var)
-:*:nc::
+  l::
+    ctrl_l_var := false
+    Send ^ll
+  return
+  ^l::
+    ctrl_l_var := false
+    Send ^ll
+  return
+  v::
+    ctrl_l_var := false
+    Send ^lv
+  return
+  h::
+    ctrl_l_var := false
+    Send ^lh
+  return
+  f::
+    ctrl_l_var := false
+    Send ^lf
+  return
+  w::
+    ctrl_l_var := false
+    Send ^lw
+  return
+  r::
+    ctrl_l_var := false
+    Send ^lr
+  return
+  c::
+    ctrl_l_var := false
+    Send ^lc
+  return
+  n::
   ctrl_l_var := false
+  ctrl_ln_var := true
+  return
+#If
+#If ctrl_ln_var
+  c::
+  ctrl_ln_var := false
   Run, cmd.exe
-return
+  return
 #If
 
 ; quit interface
@@ -455,12 +533,36 @@ return
   return
 #If
 
-~^s::
+$^s::
 ctrl_s_var := true
 Sleep 1000
 ctrl_s_var := false
 return
 #If (ctrl_s_var)
+  m::
+    ctrl_s_var := false
+    Send ^sm
+  return
+  z::
+    ctrl_s_var := false
+    Send ^sz
+  return
+  r::
+    ctrl_s_var := false
+    Send ^sr
+  return
+  i::
+    ctrl_s_var := false
+    Send ^si
+  return
+  n::
+    ctrl_s_var := false
+    Send ^sn
+  return
+  o::
+    ctrl_s_var := false
+    Send ^so
+  return
   u::
     SoundGet, currentVolume
     newVolume := currentVolume + 5
@@ -472,6 +574,7 @@ return
     SoundSet, %newVolume%
   return
   s::
+    ctrl_s_var := false
     SoundSet, 50
   return
 #If
