@@ -227,6 +227,21 @@ if(fall_through){
 ToolTip press c-v...
 return
 
+$^Left::
+if(fall_through){
+  Send ^Left
+  return
+}
+Send ^{F3}
+return
+$^Right::
+if(fall_through){
+  Send ^Right
+  return
+}
+Send ^{F2}
+return
+
 $^f::
 if(fall_through){
   Send ^f
