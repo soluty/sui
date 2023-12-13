@@ -93,12 +93,12 @@ RCtrl & h::Send ^!h
 RCtrl & i::Send ^!i
 RCtrl & j::Send ^!j
 RCtrl & k::Send ^!k
-RCtrl & l::Send ^!l
+RCtrl & l::Send ^!j
 RCtrl & m::Send ^!m
 RCtrl & n::Send ^!n
 RCtrl & o::Send ^!o
 RCtrl & p::Send ^!p
-RCtrl & q::Send ^!q
+RCtrl & q::Send #q
 RCtrl & r::Send ^!r
 RCtrl & s::Send ^!s
 RCtrl & t::Send ^!t
@@ -130,12 +130,12 @@ AppsKey & h::Send ^!h
 AppsKey & i::Send ^!i
 AppsKey & j::Send ^!j
 AppsKey & k::Send ^!k
-AppsKey & l::Send ^!l
+AppsKey & l::Send ^!j
 AppsKey & m::Send ^!m
 AppsKey & n::Send ^!n
 AppsKey & o::Send ^!o
 AppsKey & p::Send ^!p
-AppsKey & q::Send ^!q
+AppsKey & q::Send #q
 AppsKey & r::Send ^!r
 AppsKey & s::Send ^!s
 AppsKey & t::Send ^!t
@@ -396,7 +396,7 @@ return
 #If
 
 ; quit interface
-^q::
+$^q::
 ctrl_q_var := true
 Sleep 1000
 ctrl_q_var := false
@@ -423,6 +423,10 @@ return
     Send !{F4}
     return
   }
+  Send ^qq
+  return
+  ^q::
+  ctrl_q_var := false
   Send ^qq
   return
   t::
@@ -563,6 +567,10 @@ return
     ctrl_s_var := false
     Send ^so
   return
+  h::
+    ctrl_s_var := false
+    Send ^sh
+  return
   u::
     SoundGet, currentVolume
     newVolume := currentVolume + 5
@@ -578,3 +586,49 @@ return
     SoundSet, 50
   return
 #If
+
+^w::
+ctrl_w_var := true
+return
+#If (ctrl_w_var)
+  !r::
+  Send {Up}
+  return
+  !i::
+  Send {Down}
+  return
+  !n::
+  Send {Left}
+  return
+  !o::
+  Send {Right}
+  return
+  .::
+  Send  {Alt Down}{Tab Down}
+  return
+  !Esc::
+  ctrl_w_var := false
+  Send {Tab Up}{Alt Up}
+  return
+  !CapsLock::
+  ctrl_w_var := false
+  Send {Tab Up}{Alt Up}
+  return
+  !Enter::
+  ctrl_w_var := false
+  Send {Tab Up}{Alt Up}
+  return
+  Esc::
+  ctrl_w_var := false
+  Send {Tab Up}{Alt Up}
+  return
+  CapsLock::
+  ctrl_w_var := false
+  Send {Tab Up}{Alt Up}
+  return
+  Enter::
+  ctrl_w_var := false
+  Send {Tab Up}{Alt Up}
+  return
+#If
+
