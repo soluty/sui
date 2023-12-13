@@ -44,7 +44,29 @@ return
 ;ToolTip, cool sui!!!!!!!
 ;return
 ; CapsLock map to Esc/Alt
-CapsLock::Send {Esc}
+*CapsLock::
+if (WinExist("ahk_class SoPY_Comp")){
+  Send {Enter}
+}
+vimApps := ["goland64.exe","Code.exe","idea.exe","cmd.exe","wezterm-gui.exe","obsidian.exe"]
+for k,app in vimApps {
+  if WinActive("ahk_exe " . app){
+    SendInput {Blind}{Esc Down}{Esc Up}
+    IME_SET(0)
+    SendInput {Blind}{Esc Down}{Esc Up}
+    return
+  }
+}
+
+sbApps :=  ["Wechat.exe","WXWork.exe","QQ.exe"]
+for k,app in sbApps {
+  if WinActive("ahk_exe " . app) {
+    WinActivate, ahk_class Shell_TrayWnd
+    return
+  }
+}
+SendInput {Blind}{Esc Down}{Esc Up}
+return
 CapsLock & a::Send !a
 CapsLock & b::Send !b
 CapsLock & c::Send !c
