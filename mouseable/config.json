@@ -1,6 +1,6 @@
 {
   "command": {
-    "activate": "Ctrl+P",
+    "activate": "Ctrl+F1",
     "deactivate": "Esc",
     "sniper-mode": "Ctrl",
     "sniper-mode-wheel": "Ctrl",

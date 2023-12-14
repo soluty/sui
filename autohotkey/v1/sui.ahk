@@ -216,16 +216,37 @@ return
 #If
 #IfWinNotActive
 
+$^p::
+if (fall_through) {
+  Send ^p
+  return
+}
+WinGetActiveStats, Title, Width, Height, X, Y
+CoordMode, Mouse, Screen
+MouseGetPos mx, my
+
+if (mx > X and mx <X+Width and my > Y and my < Y+Height) {
+    Sleep 200
+    Send ^{F1}
+    return
+}
+IfWinExist, %Title%
+{
+    SetMouseDelay, 0
+    MouseMove, (X+Width/2), (Y+Height/2)
+    SetMouseDelay, -1
+    Sleep 200
+    Send ^{F1}
+}
+else
+{
+    Sleep 200
+    Send ^{F1}
+}
+return
 
 ; sui fallthrough interface
 fall_through := false
-$^v::
-if(fall_through){
-  Send ^v
-  return
-}
-ToolTip press c-v...
-return
 
 $^Left::
 if(fall_through){
@@ -483,10 +504,14 @@ return
 
 ; use in glazewm window manager, if your manager is komorebi, uncommont this
 ^Up::
-Send ^k^{Left}^{Right}
+Send ^k
+Send ^{F3}
+Send ^{F2}
 return
 ^Down::
-Send ^k^{Left}^{Right}
+Send ^k
+Send ^{F3}
+Send ^{F2}
 return
 
 
@@ -562,6 +587,34 @@ return
   ctrl_y_var := false
   Send, ^{F12}
   return
+  v::
+  ToolTip start record..
+  ctrl_y_var := false
+  ; need obs to record video
+  if WinExist("ahk_exe obs64.exe")
+  {
+    WinGet, obsWindow, ID, ahk_exe obs64.exe
+    if (obsWindow)
+    {
+      screen_recording := true
+      obs_window_hd := obsWindow
+      ; todo make it more common
+      ;WinGetActiveTitle, currentWindow
+      ; Run, komorebic focus-named-workspace rss
+      Send, ^td ; to obs workspace
+      WinGet, currentWindow, ID, A
+      WinActivate, ahk_id %obsWindow%
+      WinWaitActive, ahk_id %obsWindow%
+      Send, ^{F4}
+      Send, ^te ; to editor workspace
+      ;Run, komorebic focus-named-workspace editor
+      ;WinActivate, ahk_id %currentWindow%
+      ;WinWaitActive, ahk_id %currentWindow%
+    }else{
+      ToolTip no obs window..
+    }
+  }
+  return
   p::
   ctrl_y_var := false
   ctrl_yp_var := true
@@ -573,6 +626,43 @@ return
   SendHttpGet("http://127.0.0.1:60828/ocr_recognize?screenshot=true")
   return
 #If
+
+
+#IfWinActive, ahk_exe obs64.exe
+s::
+if(screen_recording){
+  screen_recording := false
+  ToolTip
+  Send, ^{F5}
+  return
+}
+return
+p::
+if(screen_recording){
+  ToolTip obs_is_pause..
+  Send, ^{F6}
+  return
+}
+return
+r::
+if(screen_recording){
+  ToolTip obs_is_recording..
+  Send, ^{F7}
+  Sleep 1000
+  ToolTip
+  return
+}
+return
+#IfWinActive
+
+#IfWinActive ahk_exe wezterm-gui.exe
+^z::
+ToolTip dont press ctrl+z.. use zellij to multiplex your job.
+Sleep 1000
+ToolTip
+return
+#IfWinActive
+
 
 $^s::
 ctrl_s_var := true
@@ -625,6 +715,10 @@ return
 #If
 
 ^w::
+if (fall_through) {
+  Send ^w
+  return
+}
 ctrl_w_var := true
 return
 #If (ctrl_w_var)
@@ -669,3 +763,27 @@ return
   return
 #If
 
+$^t::
+if (fall_through) {
+  Send ^t
+  return
+}
+ctrl_w_var := true
+return
+#If (ctrl_w_var)
+  e::
+  Send ^te
+  return
+  b::
+  Send ^tb
+  return
+  t::
+  Send ^tt
+  return
+  d::
+  Send ^td
+  return
+  i::
+  Send ^ti
+  return
+#If
