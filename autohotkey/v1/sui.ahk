@@ -9,6 +9,7 @@ Sleep 500
 ToolTip
 
 #Include %A_ScriptDir%\common.ahk
+#Include %A_ScriptDir%\editline.ahk
 
 if (SUI_WM="komorebi") {
   #Include %A_ScriptDir%\komorebi\init.ahk

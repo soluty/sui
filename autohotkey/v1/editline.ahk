@@ -4,6 +4,7 @@
 #If WinActive("ahk_exe Explorer.EXE")
  or WinActive("ahk_exe notepad.exe")
  or WinActive("ahk_exe NotepadNext.exe")
+ or WinActive("ahk_exe Code.exe")
 $^e::
 ctrl_e_var_editline := true
 IME_SET(0)

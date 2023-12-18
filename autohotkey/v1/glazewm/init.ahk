@@ -1,4 +1,4 @@
-
+;fallthrough
 $^Left::
 if(SUI_WM_FALL_THROUGH){
   Send ^Left
@@ -14,6 +14,7 @@ if(SUI_WM_FALL_THROUGH){
 Send ^{F2}
 return
 
+; launch interface
 $^l::
 ctrl_l_var := true
 im_current := SUI_CURRENT_IM
@@ -30,6 +31,8 @@ return
   return
   ^l::
     ctrl_l_var := false
+    Send ^ll
+  return
   v::
     ctrl_l_var := false
     Send ^lv
@@ -126,7 +129,7 @@ Send ^k
 Send ^{F3}
 Send ^{F2}
 return
-
+; size interface
 $^s::
 ctrl_s_var := true
 Sleep 1000
@@ -177,6 +180,7 @@ return
   return
 #If
 
+; tabto interface
 $^t::
 if (SUI_WM_FALL_THROUGH) {
   Send ^t

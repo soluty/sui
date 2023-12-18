@@ -5,9 +5,10 @@ ctrl_b_var := true
 Sleep 1000
 ctrl_b_var := false
 return
-!v::
+$!v::
 alt_v_var := true
-Send !v
+alt_vs_var := false
+;Send !+v
 return
 
 RCtrl::Alt
@@ -117,51 +118,95 @@ return
   send !vw
   return
   a::
-  alt_v_var := false
-  send !va
+  if(!alt_vs_var){
+    alt_v_var := false
+    send !va
+  } else {
+    Send a
+  }
   return
   i::
-  alt_v_var := false
-  send !vi
+  if(!alt_vs_var){
+    alt_v_var := false
+    send !vi
+  } else {
+    Send i
+  }
   return
   n::
-  alt_v_var := false
-  send !vn
+  if(!alt_vs_var){
+    alt_v_var := false
+    send !vn
+  } else {
+    Send n
+  }
   return
   o::
-  alt_v_var := false
-  send !vo
+  if(!alt_vs_var){
+    alt_v_var := false
+    send !vo
+  } else {
+    Send o
+  }
   return
   p::
-  alt_v_var := false
-  send !vp
+  if(!alt_vs_var){
+    alt_v_var := false
+    send !vp
+  } else {
+    Send p
+  }
   return
   l::
-  alt_v_var := false
-  send !vl
+  if(!alt_vs_var){
+    alt_v_var := false
+    send !vl
+  } else {
+    Send l
+  }
   return
   b::
-  alt_v_var := false
-  send !vb
+  if(!alt_vs_var){
+    alt_v_var := false
+    send !vb
+  } else {
+    Send b
+  }
   return
   q::
-  alt_v_var := false
-  send !vq
+  if(!alt_vs_var){
+    alt_v_var := false
+    send !vq
+  } else {
+    Send q
+  }
   return
   u::
-  alt_v_var := false
-  send !vu
+  if(!alt_vs_var){
+    alt_v_var := false
+    send !vu
+  } else {
+    Send u
+  }
   return
   r::
-  alt_v_var := false
-  send !vr
+  if(!alt_vs_var){
+    alt_v_var := false
+    send !vr
+  } else {
+    Send r
+  }
   return
   v::
-  send !vv
+  if(!alt_vs_var){
+    send !vv
+  } else {
+    Send v
+  }
   return
-  h::
-  alt_v_var := false
-  send h
+  s::
+  alt_vs_var := true
+  send !vs
   return
   !y::
   alt_v_var := false

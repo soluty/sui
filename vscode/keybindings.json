@@ -1,0 +1,2558 @@
+[
+  // some trick in vscode
+  {
+    "key": "escape",
+    "command": "notifications.hideToasts",
+    "when": "notificationToastsVisible",
+  },
+  {
+    "key": "escape",
+    "command": "closeReferenceSearch",
+    "when": "referenceSearchVisible"
+  },
+  {
+    "key": "escape",
+    "command": "removeSecondaryCursors",
+    "when": "editorHasMultipleSelections && textInputFocus"
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "auxiliaryBarFocus || panelFocus || sideBarFocus",
+  },
+  {
+    "key": "escape",
+    "command": "list.closeFind",
+    "when": "listFocus && treeFindOpen"
+  },
+  {
+    "key": "escape",
+    "command": "notifications.hideList",
+    "when": "notificationCenterVisible"
+  },
+  {
+    "key": "alt+t i",
+    "command": "search.focus.nextInputBox",
+    "when": "!editorTextFocus && inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "alt+t r",
+    "command": "search.focus.previousInputBox",
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus",
+  },
+  {
+    "key": "alt+t r",
+    "command": "search.action.focusSearchFromResults",
+    "when": "firstMatchFocus && searchViewletVisible"
+  },
+  // common interface
+  {
+    "key": "alt+w .",
+    "command": "workbench.action.quickOpenView",
+  },
+  {
+    "key": "alt+w t",
+    "command": "workbench.action.terminal.focus",
+  },
+  {
+    "key": "alt+w e",
+    "command": "workbench.explorer.fileView.focus",
+  },
+  {
+    "key": "alt+w o",
+    "command": "workbench.panel.output.focus",
+  },
+  {
+    "key": "alt+w g",
+    "command": "workbench.view.scm",
+  },
+  {
+    "key": "alt+w m",
+    "command": "workbench.extensions.action.focusExtensionsView",
+  },
+  {
+    "key": "alt+w h",
+    "command": "editor.action.showDefinitionPreviewHover",
+  },
+  {
+    "key": "alt+w w",
+    "command": "editor.action.showDefinitionPreviewHover",
+  },
+  {
+    "key": "alt+w alt+w",
+    "command": "editor.action.showDefinitionPreviewHover",
+  },
+  {
+    "key": "alt+w c",
+    "command": "references-view.showCallHierarchy",
+  },
+  {
+    "key": "alt+l .",
+    "command": "workbench.action.showCommands",
+  },
+  //// editor text
+  // launch interface
+  {
+    "key": "alt+l h",
+    "command": "workbench.action.splitEditorDown",
+  },
+  {
+    "key": "alt+l v",
+    "command": "workbench.action.splitEditorRight",
+  },
+  {
+    "key": "alt+l c",
+    "command": "workbench.action.openGlobalKeybindingsFile",
+  },
+  {
+    "key": "alt+l r",
+    "command": "workbench.action.reloadWindow",
+  },
+  {
+    "key": "alt+l n f",
+    "command": "workbench.action.files.newFile",
+  },
+  // focus interface
+  {
+    "key": "alt+n",
+    "command": "workbench.action.focusLeftGroup",
+  },
+  {
+    "key": "alt+o",
+    "command": "workbench.action.focusRightGroup",
+  },
+  {
+    "key": "alt+r",
+    "command": "workbench.action.focusAboveGroup",
+  },
+  {
+    "key": "alt+i",
+    "command": "workbench.action.focusBelowGroup",
+  },
+  {
+    "key": "alt+n",
+    "command": "metaGo.selectionSwitchActiveWithAnchor",
+    "when": "textInputFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+o",
+    "command": "metaGo.selectionSwitchActiveWithAnchor",
+    "when": "textInputFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+w left",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.focusSideBar",
+        "workbench.action.focusSideBar",
+      ],
+    },
+  },
+  {
+    "key": "alt+w right",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.focusAuxiliaryBar",
+        "workbench.action.focusAuxiliaryBar",
+      ],
+    },
+  },
+  {
+    "key": "alt+w up",
+    "command": "workbench.action.focusActiveEditorGroup",
+  },
+  {
+    "key": "alt+w down",
+    "command": "workbench.action.focusPanel",
+  },
+  // quit interface
+  {
+    "key": "alt+q q",
+    "command": "workbench.action.closeActiveEditor",
+  },
+  {
+    "key": "alt+q o",
+    "command": "workbench.action.editorLayoutSingle",
+  },
+  {
+    "key": "alt+q t",
+    "command": "workbench.action.editorLayoutSingle",
+  },
+  {
+    "key": "alt+q a",
+    "command": "workbench.action.closeWindow",
+  },
+  // size interface
+  {
+    "key": "alt+shift+s n",
+    "command": "workbench.action.decreaseViewWidth",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+shift+s o",
+    "command": "workbench.action.increaseViewWidth",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+shift+s i",
+    "command": "workbench.action.decreaseViewHeight",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+shift+s r",
+    "command": "workbench.action.increaseViewHeight",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+shift+s m",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.closeSidebar",
+        "workbench.action.closeAuxiliaryBar",
+        "workbench.action.closePanel",
+      ],
+    },
+  },
+  {
+    "key": "alt+shift+s z",
+    "command": "workbench.action.toggleZenMode",
+  },
+  {
+    "key": "alt+shift+s u",
+    "command": "editor.action.fontZoomIn",
+  },
+  {
+    "key": "alt+shift+s d",
+    "command": "editor.action.fontZoomOut",
+  },
+  {
+    "key": "alt+shift+s s",
+    "command": "editor.action.fontZoomReset",
+  },
+  // move interface
+  {
+    "key": "alt+shift+m n",
+    "command": "workbench.action.moveActiveEditorGroupLeft",
+  },
+  {
+    "key": "alt+shift+m o",
+    "command": "workbench.action.moveActiveEditorGroupRight",
+  },
+  {
+    "key": "alt+shift+m i",
+    "command": "workbench.action.moveActiveEditorGroupDown",
+  },
+  {
+    "key": "alt+shift+m r",
+    "command": "workbench.action.moveActiveEditorGroupUp",
+  },
+  //// bottom panel
+  {
+    "key": "alt+left",
+    "command": "workbench.action.previousPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "alt+l v",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+s m",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+q q",
+    "command": "workbench.action.closePanel",
+    "when": "panelFocus"
+  },
+  {
+    "key": "alt+q q",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  //// sidebar
+  {
+    "key": "alt+q q",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "alt+up",
+    "command": "workbench.action.previousSideBarView",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "alt+down",
+    "command": "workbench.action.nextSideBarView",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "alt+left",
+    "command": "workbench.action.previousSideBarView",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.nextSideBarView",
+    "when": "sideBarFocus"
+  },
+  {
+    // "key": "alt+r",
+    // "command": "workbench.action.showCommands",
+    // "when": "editorTextFocus"
+    // workbench.action.focusTitleBar
+    // workbench.action.showCommands
+    // "when": "explorerViewletCompressedFocus",
+    // "when": "bannerFocused",
+    //  iconSelectBoxFocus
+    // "treeElementCanExpand"
+    // "when": "listFocus && !inputFocus",
+  },
+  {
+    "key": "alt+i",
+    "command": "command-runner.run",
+    "args": {
+      "command": "\"%ProgramFiles%/AutoHotkey/AutoHotkey.exe\" %SUI_ROOT%/autohotkey/v1/vscode/viewcontainer_focus_down.ahk",
+      "terminal": "cmd"
+    },
+    "when": "sideBarFocus",
+  },
+  {
+    "key": "alt+r",
+    "command": "command-runner.run",
+    "args": {
+      "command": "\"%ProgramFiles%/AutoHotkey/AutoHotkey.exe\" %SUI_ROOT%/autohotkey/v1/vscode/viewcontainer_focus_up.ahk",
+      "terminal": "cmd"
+    },
+    "when": "sideBarFocus",
+  },
+  //// right sidebari
+  {
+    "key": "alt+q q",
+    "command": "workbench.action.closeAuxiliaryBar",
+    "when": "auxiliaryBarFocus"
+  },
+  // coding interface
+  {
+    "key": "alt+s",
+    "command": "list.find",
+    "when": "listFocus && listSupportsFind"
+  },
+  {
+    "key": "alt+s",
+    "command": "metaGo.gotoSmart",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+v s",
+    "command": "metaGo.selectSmart",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+y s",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.selectSmart", // 等它走完
+        // "editor.action.clipboardCopyAction",
+        // "workbench.action.showCommands",
+        {
+          "command": "command-runner.run",
+          "args": {
+            "command": "echo hello"
+          }
+        },
+      ],
+    },
+    // "command": "metaGo.selectSmart",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d s",
+    "command": "metaGo.metaJump.deleteToSmart",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus",
+  },
+  // s and 文本对象  iw, aw,    w, iw, aw, 增加 nw, ow, rw
+  // s, w, l, t, b, q, f, u     rb,rq,
+  // d,y,v,c,gc,gu,gU,gs comment alt+c <alt>+c
+  {
+    "key": "alt+d",
+    "command": "editor.action.clipboardCutAction",
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+y",
+    "command": "editor.action.clipboardCopyAction",
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+c alt+c",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "alt+g u u",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "alt+d",
+    "command": "editor.action.clipboardCutAction",
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+d d",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d alt+d",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+p",
+    "command": "editor.action.clipboardPasteAction",
+  },
+  {
+    "key": "shift+up",
+    "command": "cursorUpSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+up",
+    "command": "cursorColumnSelectUp",
+    "when": "editorColumnSelection && textInputFocus"
+  },
+  // object, w,W,l,q,b,f,
+  {
+    "key": "h",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+g n",
+    "command": "workbench.action.navigateBack",
+  },
+  {
+    "key": "alt+g o",
+    "command": "workbench.action.navigateForward",
+  },
+  //mod:to       t
+  // word
+  {
+    "key": "alt+t w",
+    "command": "cursorWordStartRight",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t n w",
+    "command": "cursorWordStartLeft",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t o w",
+    "command": "cursorWordStartRight",
+    "when": "editorTextFocus",
+  },
+  // big word
+  {
+    "key": "alt+t shift+w",
+    "command": "metaGo.cursorSpaceWordRight",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t n shift+w",
+    "command": "metaGo.cursorSpaceWordLeft",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t o shift+w",
+    "command": "metaGo.cursorSpaceWordRight",
+    "when": "editorTextFocus",
+  },
+  // paragraphs
+  {
+    "key": "alt+t p",
+    "command": "metaGo.gotoEmptyLineDown",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t n p",
+    "command": "metaGo.gotoEmptyLineUp",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t o p",
+    "command": "metaGo.gotoEmptyLineDown",
+    "when": "editorTextFocus",
+  },
+  // line
+  {
+    "key": "alt+t l",
+    "command": "workbench.action.gotoLine",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t n l",
+    "command": "cursorLineStart",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t o l",
+    "command": "cursorLineEnd",
+    "when": "editorTextFocus",
+  },
+  // bracket
+  {
+    "key": "alt+t b",
+    "command": "editor.action.jumpToBracket",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t n b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.jumpToBracket",
+        "cursorRight",
+        "metaGo.jumpToBracket",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t o b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.jumpToBracket",
+        "cursorRight",
+        "metaGo.jumpToBracket",
+        "metaGo.jumpToBracket",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  // quote
+  {
+    "key": "alt+t q",
+    "command": "quickSelect.cursorQuoteEnd",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t n q",
+    "command": "quickSelect.cursorQuoteStart",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t o q",
+    "command": "quickSelect.cursorQuoteEnd",
+    "when": "editorTextFocus",
+  },
+  // universe
+  {
+    "key": "alt+t u",
+    "command": "cursorTop",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t n u",
+    "command": "cursorBottom",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+t o u",
+    "command": "cursorBottom",
+    "when": "editorTextFocus",
+  },
+  // search
+  {
+    "key": "alt+t s",
+    "command": "metaGo.addCursorAfter",
+    "when": "editorTextFocus",
+  },
+  //mod:select       v
+  {
+    "key": "alt+v v",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorLineStart",
+        "cursorLineEndSelect",
+        "cursorRightSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {//ops... this regular op need a little plugin....
+    "key": "alt+v v",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "bcjti.selectLine",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLineStartSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLeftSelect",
+        "cursorLineEndSelect",
+        "cursorRightSelect",
+      ],
+    },
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+i",
+    "command": "editor.action.toggleColumnSelection",
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+r",
+    "command": "editor.action.toggleColumnSelection",
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  // word
+  {
+    "key": "alt+v w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v n w",
+    "command": "cursorWordLeftSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v o w",
+    "command": "cursorWordRightSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v i w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v a w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordLeft",
+        "cursorWordRightSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // big word
+  {
+    "key": "alt+v shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeft",
+        "metaGo.cursorSpaceWordRightSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v n shift+w",
+    "command": "metaGo.cursorSpaceWordLeftSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v o shift+w",
+    "command": "metaGo.cursorSpaceWordRightSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v i shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeft",
+        "metaGo.cursorSpaceWordRightSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v a shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeft",
+        "metaGo.cursorSpaceWordRightSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // paragraphs
+  {
+    "key": "alt+v p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.gotoEmptyLineUp",
+        "metaGo.selectEmptyLineDown",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v n p",
+    "command": "metaGo.selectEmptyLineUp",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v o p",
+    "command": "metaGo.selectEmptyLineDown",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v i p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.gotoEmptyLineUp",
+        "metaGo.selectEmptyLineDown",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v a p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.gotoEmptyLineUp",
+        "metaGo.selectEmptyLineDown",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // line
+  {
+    "key": "alt+v l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorLineStart",
+        "cursorLineEndSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v n l",
+    "command": "cursorLineStartSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v o l",
+    "command": "cursorLineEndSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v i l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorHome",
+        "cursorEndSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v a l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorLineStart",
+        "cursorLineEndSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // bracket
+  {
+    "key": "alt+v b",
+    "command": "bracketeer.selectBracketContent",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v i b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.selectToBracket",
+        "cursorLeftSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorRightSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+      ]
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v a b",
+    "command": "editor.action.selectToBracket",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    // todo 修改到更加符合sui的情况 
+    "key": "alt+v r b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        // "metaGo.jumpToBracket",
+        // "cursorRight",
+        // "metaGo.jumpToBracket",
+        // "cursorLeftSelect",
+        // {
+        //   "command": "flexible-select.select",
+        //   "args": "bracket",
+        // },
+        "bracketeer.changeBracketsTo"
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // quote
+  {
+    "key": "alt+v q",
+    "command": "quickSelect.cursorQuoteSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v n q",
+    "command": "quickSelect.cursorQuoteStartSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v o q",
+    "command": "quickSelect.cursorQuoteEndSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v i q",
+    "command": "quickSelect.cursorQuoteSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v a q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteStart",
+        "quickSelect.cursorQuoteEndSelect",
+        "cursorRightSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLeftSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v r q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteStart",
+        "cursorLeftSelect",
+        "editor.action.addSelectionToNextFindMatch",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // universe
+  {
+    "key": "alt+v u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTop",
+        "cursorBottomSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v n u",
+    "command": "cursorTopSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v o u",
+    "command": "cursorBottomSelect",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v i u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTop",
+        "cursorBottomSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v a u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTop",
+        "cursorBottomSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  //mod:delete       d
+  // word
+  {
+    "key": "alt+d w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d n w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordLeftSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d o w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordRightSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d i w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d a w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordLeft",
+        "cursorWordRightSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  // big word
+  {
+    "key": "alt+d shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeft",
+        "metaGo.cursorSpaceWordRightSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d n shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeftSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d o shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordRightSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d i shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeft",
+        "metaGo.cursorSpaceWordRightSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d a shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeft",
+        "metaGo.cursorSpaceWordRightSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  // paragraphs
+  {
+    "key": "alt+d p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.gotoEmptyLineUp",
+        "metaGo.selectEmptyLineDown",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d n p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.selectEmptyLineUp",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d o p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.selectEmptyLineDown",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d i p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.gotoEmptyLineUp",
+        "metaGo.selectEmptyLineDown",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d a p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.gotoEmptyLineUp",
+        "metaGo.selectEmptyLineDown",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  // line
+  {
+    "key": "alt+d l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.deleteLines",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d n l",
+    "command": "deleteAllLeft",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d o l",
+    "command": "deleteAllRight",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d i l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorHome",
+        "cursorEndSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d a l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorLineStart",
+        "cursorLineEndSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  // bracket
+  {
+    "key": "alt+d b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "bracketeer.selectBracketContent",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d i b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "bracketeer.selectBracketContent",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d a b",
+    "command": "editor.action.selectToBracket",
+    "args": {
+      "sequence": [
+        "bracketeer.selectBracketContent",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d r b",
+    "command": "bracketeer.removeBrackets",
+    "when": "editorTextFocus",
+  },
+  // quote
+  {
+    "key": "alt+d q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d n q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteStartSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d o q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteEndSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d i q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d a q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteStart",
+        "quickSelect.cursorQuoteEndSelect",
+        "cursorRightSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLeftSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d r q",
+    "command": "bracketeer.removeQuotes",
+    "when": "editorTextFocus",
+  },
+  // universe
+  {
+    "key": "alt+d u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTop",
+        "cursorBottomSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d n u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTopSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d o u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorBottomSelect",
+        "editor.action.clipboardCopyAction",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d i u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTop",
+        "cursorBottomSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+d a u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTop",
+        "cursorBottomSelect",
+        "deleteLeft",
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  //mod:yank       y
+  // word
+  {
+    "key": "alt+y w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y n w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordLeftSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y o w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordRightSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y i w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y a w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordLeft",
+        "cursorWordRightSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // big word
+  {
+    "key": "alt+y shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeft",
+        "metaGo.cursorSpaceWordRightSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y n shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeftSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y o shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordRightSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y i shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeft",
+        "metaGo.cursorSpaceWordRightSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y a shift+w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.cursorSpaceWordLeft",
+        "metaGo.cursorSpaceWordRightSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // paragraphs
+  {
+    "key": "alt+y p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.gotoEmptyLineUp",
+        "metaGo.selectEmptyLineDown",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y n p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.selectEmptyLineUp",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y o p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.selectEmptyLineDown",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y i p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.gotoEmptyLineUp",
+        "metaGo.selectEmptyLineDown",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y a p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "metaGo.gotoEmptyLineUp",
+        "metaGo.selectEmptyLineDown",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // line
+  {
+    "key": "alt+y l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorLineStart",
+        "cursorLineEndSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y y",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorLineStart",
+        "cursorLineEndSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y alt+y",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorLineStart",
+        "cursorLineEndSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y n l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorHomeSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y o l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorEndSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y i l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorHome",
+        "cursorEndSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y a l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorLineStart",
+        "cursorLineEndSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // bracket
+  {
+    "key": "alt+y b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "bracketeer.selectBracketContent",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y i b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "bracketeer.selectBracketContent",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y a b",
+    "command": "editor.action.selectToBracket",
+    "args": {
+      "sequence": [
+        "bracketeer.selectBracketContent",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // quote
+  {
+    "key": "alt+y q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y n q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteStartSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y o q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteEndSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y i q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y a q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteStart",
+        "quickSelect.cursorQuoteEndSelect",
+        "cursorRightSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLeftSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // universe
+  {
+    "key": "alt+y u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTop",
+        "cursorBottomSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y n u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTopSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y o u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorBottomSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y i u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTop",
+        "cursorBottomSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y a u",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorTop",
+        "cursorBottomSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  //mod:comment  gc
+  {
+    "key": "alt+g c",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.commentLine",
+      ],
+    },
+    "when": "editorTextFocus && !editorReadonly && editorHasSelection",
+  },
+  {
+    "key": "alt+g c w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+        "editor.action.blockComment",
+      ],
+    },
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "alt+g c b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "bracketeer.selectBracketContent",
+        "editor.action.blockComment",
+      ],
+    },
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "alt+g c l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.commentLine",
+      ],
+    },
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "alt+g c c",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.commentLine",
+      ],
+    },
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  //mod:copydown cd code format
+  {
+    "key": "alt+c d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "alt+c u",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly ",
+  },
+  {
+    "key": "alt+c alt+d",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "alt+c alt+u",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly ",
+  },
+  {
+    "key": "alt+u",
+    "command": "undo",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "alt+shift+u",
+    "command": "redo",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  // todo 
+  //mod:upercase gu gU CamelCase
+  //mod:align    ga
+  // todo 
+  {
+    "key": "alt+m l",
+    "command": "do what you like",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "editor.actions.findWithArgs",
+          "args": {
+            "replaceString": "",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m q",
+    "command": "do what you like",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m b",
+    "command": "do what you like",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m f",
+    "command": "do what you like",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  //mod:find s(selection) cw cl cf pw pl pf vw vl vf w l f b q cb cq pb pq vb r vq
+  // layer(selection, currentfile, dir, project, vm)      what (quote, bracket, word, line, file) other
+  {
+    "key": "alt+m s",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "editor.actions.findWithArgs",
+          "args": {
+            "searchString": "",
+            "replaceString": "",
+          },
+        },
+        "toggleFindInSelection",
+      ],
+    },
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+m c",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "editor.actions.findWithArgs",
+          "args": {
+            "replaceString": "",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+m c w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "editor.actions.findWithArgs",
+          "args": {
+            "replaceString": "",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m c q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteStart",
+        "quickSelect.cursorQuoteEndSelect",
+        "cursorRightSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLeftSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        {
+          "command": "editor.actions.findWithArgs",
+          "args": {
+            "replaceString": "",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m c b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "bracketeer.selectBracketContent",
+        "cursorRightSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLeftSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        {
+          "command": "editor.actions.findWithArgs",
+          "args": {
+            "replaceString": "",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m c l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "editor.actions.findWithArgs",
+          "args": {
+            "searchString": "",
+            "replaceString": "",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m d",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "${fileDirname}/**",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+m d w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "${fileDirname}/**",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m d q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteStart",
+        "quickSelect.cursorQuoteEndSelect",
+        "cursorRightSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLeftSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "${fileDirname}/**",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m d b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.selectToBracket",
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "${fileDirname}/**",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m d l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "query": "",
+            "isRegex": true,
+            "filesToInclude": "${fileDirname}/**",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  //mp "filesToInclude": "${workspaceFolder}/**",
+  {
+    "key": "alt+m p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "${workspaceFolder}/**",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+m p w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "${workspaceFolder}/**",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m p q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteStart",
+        "quickSelect.cursorQuoteEndSelect",
+        "cursorRightSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLeftSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "${workspaceFolder}/**",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m p b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.selectToBracket",
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "${workspaceFolder}/**",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m p l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "query": "",
+            "isRegex": true,
+            "filesToInclude": "${workspaceFolder}/**",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  //mv "filesToInclude": "",
+  {
+    "key": "alt+m v",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+m v w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m v q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteStart",
+        "quickSelect.cursorQuoteEndSelect",
+        "cursorRightSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLeftSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m v b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.selectToBracket",
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "isRegex": true,
+            "filesToInclude": "",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m v l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "query": "",
+            "isRegex": true,
+            "filesToInclude": "",
+            "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
+          },
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // todo df pf vf
+  {
+    "key": "alt+m f",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "workbench.action.quickOpen",
+        }
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // symbol sf, sc , s
+  {
+    "key": "alt+m s",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "workbench.action.showAllSymbols",
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  // 
+  {
+    "key": "alt+m o f",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "workbench.action.showAllEditors",
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m o r",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  //code action
+  {
+    "key": "alt+c f",
+    "command": "editor.action.formatDocument",
+    "when": "editorTextFocus",
+  },
+]
