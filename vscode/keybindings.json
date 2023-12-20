@@ -67,7 +67,7 @@
     "command": "workbench.view.scm",
   },
   {
-    "key": "alt+w m",
+    "key": "alt+w p",
     "command": "workbench.extensions.action.focusExtensionsView",
   },
   {
@@ -83,8 +83,23 @@
     "command": "editor.action.showDefinitionPreviewHover",
   },
   {
+    "key": "alt+w m",
+    "command": "workbench.action.focusTitleBar",
+  },
+  {
     "key": "alt+w c",
     "command": "references-view.showCallHierarchy",
+    "when": "editorHasCallHierarchyProvider && editorTextFocus && !inReferenceSearchEditor",
+  },
+  {
+    "key": "alt+c",
+    "command": "references-view.showOutgoingCalls",
+     "when": "focusedView == references-view.tree && !treeFindOpen && reference-list.source == callHierarchy && references-view.callHierarchyMode == showIncoming",
+  },
+  {
+    "key": "alt+c",
+    "command": "references-view.showIncomingCalls",
+    "when": "focusedView == references-view.tree && !treeFindOpen && reference-list.source == callHierarchy && references-view.callHierarchyMode == showOutgoing",
   },
   {
     "key": "alt+l .",
@@ -140,6 +155,16 @@
     "when": "textInputFocus && editorHasSelection",
   },
   {
+    "key": "alt+left",
+    "command": "workbench.action.previousEditorInGroup",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.nextEditorInGroup",
+    "when": "editorFocus"
+  },
+  {
     "key": "alt+w left",
     "command": "extension.multiCommand.execute",
     "args": {
@@ -171,13 +196,19 @@
   {
     "key": "alt+q q",
     "command": "workbench.action.closeActiveEditor",
-  },
-  {
-    "key": "alt+q o",
-    "command": "workbench.action.editorLayoutSingle",
+    // "when": "editorFocus",
   },
   {
     "key": "alt+q t",
+    "command": "workbench.action.closeEditorsAndGroup",
+    "when": "editorFocus",
+  },
+  {
+    "key": "alt+q o",
+    "command": "workbench.action.closeOtherEditors",
+  },
+  {
+    "key": "alt+q n",
     "command": "workbench.action.editorLayoutSingle",
   },
   {
@@ -568,7 +599,7 @@
   },
   {
     "key": "alt+t n u",
-    "command": "cursorBottom",
+    "command": "cursorTop",
     "when": "editorTextFocus",
   },
   {
@@ -595,7 +626,7 @@
     },
     "when": "editorTextFocus && !editorHasSelection",
   },
-  {//ops... this regular op need a little plugin....
+  { //ops... this regular op need a little plugin....
     "key": "alt+v v",
     "command": "extension.multiCommand.execute",
     "args": {
@@ -2553,6 +2584,43 @@
   {
     "key": "alt+c f",
     "command": "editor.action.formatDocument",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+c a",
+    "command": "editor.action.sourceAction",
+    "when": "editorTextFocus",
+  },
+  // goto some where
+  {
+    "key": "alt+r",
+    "command": "editor.action.previousMatchFindAction",
+    "when": "editorFocus && findInputFocussed",
+  },
+  {
+    "key": "alt+i",
+    "command": "editor.action.nextMatchFindAction",
+    "when": "editorFocus && findInputFocussed",
+  },
+  // copy other
+  {
+    "key": "alt+y o i", // todo line and column number
+    "command": "copyFilePath",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+y o n",
+    "command": "copy-file-directory.copyFileNameWithExtension",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+y o d",
+    "command": "copy-file-directory.copyFileDirectory",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+y o p",
+    "command": "copyFilePath",
     "when": "editorTextFocus",
   },
 ]
