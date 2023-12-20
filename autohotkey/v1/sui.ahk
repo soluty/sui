@@ -26,6 +26,9 @@ if (SUI_MODULES="" || Contains(SUI_MODULES, "vscode")) {
 if (SUI_MODULES="" || Contains(SUI_MODULES, "wezterm")) {
   #Include %A_ScriptDir%\wezterm\init.ahk
 }
+if (SUI_MODULES="" || Contains(SUI_MODULES, "explorer")) {
+  #Include %A_ScriptDir%\explorer\init.ahk
+}
 
 ; CapsLock map to Esc/Alt
 *CapsLock::
