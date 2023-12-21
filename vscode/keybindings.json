@@ -2657,7 +2657,7 @@
   },
   {
     "key": "alt+c a",
-    "command": "editor.action.sourceAction",
+    "command": "editor.action.quickFix",
     "when": "editorTextFocus",
   },
   // goto some where
@@ -2706,5 +2706,20 @@
     "key": "alt+y o p",
     "command": "copyFilePath",
     "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+g w",
+    "command": "editor.action.openLink",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+c r",
+    "command": "editor.action.rename",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "alt+c e",
+    "command": "go.godoctor.extract",
+    "when": "editorTextFocus && editorLangId == 'go'",
   },
 ]
