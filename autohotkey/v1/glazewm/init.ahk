@@ -181,32 +181,40 @@ return
 #If
 
 ; tabto interface
-$^t::
+^t::
 if (SUI_WM_FALL_THROUGH) {
+  ToolTip fallthrough..
   Send ^t
   return
 }
-ctrl_t_var := true
+IME_SET(0)
+ctrl_t_var_glaezwm := true
+Sleep 1000
 return
-#If (ctrl_t_var)
+#If (ctrl_t_var_glaezwm)
   e::
-  ctrl_t_var := false
-  Send ^te
+  ctrl_t_var_glaezwm := false
+  Send ^t
+  Send e
   return
   b::
-  ctrl_t_var := false
-  Send ^tb
+  ctrl_t_var_glaezwm := false
+  Send ^t
+  Send b
   return
   t::
-  ctrl_t_var := false
-  Send ^tt
+  ctrl_t_var_glaezwm := false
+  Send ^t
+  Send t
   return
   d::
-  ctrl_t_var := false
-  Send ^td
+  ctrl_t_var_glaezwm := false
+  Send ^t
+  Send d
   return
   i::
-  ctrl_t_var := false
-  Send ^ti
+  ctrl_t_var_glaezwm := false
+  Send ^t
+  Send i
   return
 #If

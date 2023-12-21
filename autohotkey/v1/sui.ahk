@@ -29,6 +29,9 @@ if (SUI_MODULES="" || Contains(SUI_MODULES, "wezterm")) {
 if (SUI_MODULES="" || Contains(SUI_MODULES, "explorer")) {
   #Include %A_ScriptDir%\explorer\init.ahk
 }
+if (SUI_MODULES="" || Contains(SUI_MODULES, "chrome")) {
+  #Include %A_ScriptDir%\chrome\init.ahk
+}
 
 ; CapsLock map to Esc/Alt
 *CapsLock::

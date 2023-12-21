@@ -1,0 +1,220 @@
+烤椰子被子和褥子
+ {
+    alias: "F",
+    map: "gf",
+    category: categories.mouseClick,
+    description: "Open a link in non-active new tab",
+  },
+  {
+    alias: "zf",
+    category: categories.mouseClick,
+    description: "Open link URL in vim editor",
+    callback: actions.previewLink,
+  },
+
+  {
+    alias: "gh",
+    category: categories.scroll,
+    description: "Scroll to element targeted by URL hash",
+    callback: actions.scrollToHash,
+  },
+  {
+    alias: "gi",
+    category: categories.pageNav,
+    description: "Edit current URL with vim editor",
+    callback: actions.vimEditURL,
+  },
+  {
+    alias: "gi",
+    category: categories.pageNav,
+    description: "Edit current URL with vim editor",
+    callback: actions.vimEditURL,
+  },
+  {
+    alias: "gI",
+    category: categories.pageNav,
+    description: "View image in new tab",
+    callback: () => util.createHints("img", (i) => actions.openLink(i.src)),
+  },
+  {
+    alias: "g.",
+    category: categories.pageNav,
+    description: "Go to parent domain",
+    callback: () => {
+      const subdomains = window.location.host.split(".")
+      const parentDomain = (subdomains.length > 2
+        ? subdomains.slice(1)
+        : subdomains
+r      ).join(".")
+      actions.openLink(`${window.location.protocol}//${parentDomain}`)
+    },
+  },
+  {
+    alias: "yp",
+    category: categories.clipboard,
+    description: "Copy URL path of current page",
+    callback: () => Clipboard.write(window.location.href),
+  },
+  {
+    alias: "yI",
+    category: categories.clipboard,
+    description: "Copy Image URL",
+    callback: () => util.createHints("img", (i) => Clipboard.write(i.src)),
+  },
+  {
+    alias: "yA",
+    category: categories.clipboard,
+    description: "Copy link as Markdown",
+    callback: () =>
+      util.createHints("a[href]", (a) =>
+        Clipboard.write(`[${a.innerText}](${a.href})`)
+      ),
+  },
+  {
+    alias: "yO",
+    category: categories.clipboard,
+    description: "Copy page URL/Title as Org-mode link",
+    callback: () => Clipboard.write(actions.getOrgLink()),
+  },
+  {
+    alias: "yM",
+    category: categories.clipboard,
+    description: "Copy page URL/Title as Markdown link",
+    callback: () => Clipboard.write(actions.getMarkdownLink()),
+  },
+  {
+    alias: "yT",
+    category: categories.tabs,
+    description: "Duplicate current tab (non-active new tab)",
+    callback: () =>
+      actions.openLink(window.location.href, { newTab: true, active: false }),
+  },
+  // TODO
+  // {
+  //   alias:       "yx",
+  //   category:    categories.tabs,
+  //   description: "Cut current tab",
+  //   callback:    () => actions.cutTab(),
+  // },
+  // {
+  //   alias:       "px",
+  //   category:    categories.tabs,
+  //   description: "Paste tab",
+  //   callback:    () => actions.pasteTab(),
+  // },
+  {
+    alias: ";se",
+    category: categories.settings,
+    description: "Edit Settings",
+    callback: actions.editSettings,
+  },
+  {
+    alias: "gS",
+    category: categories.chromeURLs,
+    description: "Open Chrome settings",
+  },
+  {
+    alias: "=W",
+    category: categories.misc,
+    description: "Lookup whois information for domain",
+    callback: () => actions.openLink(actions.getWhoisUrl(), { newTab: true }),
+  },
+  {
+    alias: "=d",
+    category: categories.misc,
+    description: "Lookup dns information for domain",
+    callback: () => actions.openLink(actions.getDnsInfoUrl(), { newTab: true }),
+  },
+  {
+    alias: "=D",
+    category: categories.misc,
+    description: "Lookup all information for domain",
+    callback: () =>
+      actions.openLink(actions.getDnsInfoUrl({ all: true }), { newTab: true }),
+  },
+  {
+    alias: "=c",
+    category: categories.misc,
+    description: "Show Google's cached version of page",
+    callback: () =>
+      actions.openLink(actions.getGoogleCacheUrl(), { newTab: true }),
+  },
+  {
+    alias: "=a",
+    category: categories.misc,
+    description: "Show Archive.org Wayback Machine for page",
+    callback: () => actions.openLink(actions.getWaybackUrl(), { newTab: true }),
+  },
+  {
+    alias: "=A",
+    category: categories.misc,
+    description: "Show Alexa.com info for domain",
+    callback: () => actions.openLink(actions.getAlexaUrl(), { newTab: true }),
+  },
+  {
+    alias: "=s",
+    category: categories.misc,
+    description: "View social discussions for page",
+    callback: () =>
+      actions.openLink(actions.getDiscussionsUrl(), { newTab: true }),
+  },
+  {
+    alias: "=o",
+    category: categories.misc,
+    description: "Show outline.com version of page",
+    callback: () => actions.openLink(actions.getOutlineUrl(), { newTab: true }),
+  },
+  {
+    alias: "=bw",
+    category: categories.misc,
+    description: "Show BuiltWith report for page",
+    callback: () =>
+      actions.openLink(actions.getBuiltWithUrl(), { newTab: true }),
+  },
+  {
+    alias: "=wa",
+    category: categories.misc,
+    description: "Show Wappalyzer report for page",
+    callback: () =>
+      actions.openLink(actions.getWappalyzerUrl(), { newTab: true }),
+  },
+  {
+    alias: ";pd",
+    category: categories.misc,
+    description: "Toggle PDF viewer from SurfingKeys",
+    callback: actions.togglePdfViewer,
+  },
+  {
+    alias: "gxE",
+    map: "gxt",
+    category: categories.tabs,
+    description: "Close tab to left",
+  },
+  {
+    alias: "gxR",
+    map: "gxT",
+    category: categories.tabs,
+    description: "Close tab to right",
+  },
+  {
+    alias: "\\cgh",
+    category: categories.clipboard,
+    description: "Open clipboard string as GitHub path (e.g. 'torvalds/linux')",
+    callback: async () => {
+      const { url } = actions.gh.parseRepo(await navigator.clipboard.readText())
+      Front.showBanner(`Open ${url}`)
+      actions.openLink(url, { newTab: true })
+    },
+  },
+  {
+    alias: "F",
+    map: "gf",
+    category: categories.mouseClick,
+    description: "Open a link in non-active new tab",
+  },
+  {
+    alias: "oh",
+    category: categories.omnibar,
+    description: "Open URL from history",
+    callback: () => Front.openOmnibar({ type: "History" }),
+  },

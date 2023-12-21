@@ -1,8 +1,22 @@
-Shortcut User Interface
+Shortcut User Interface    SUI
+Command Line Interface     CLI  ShortCut
+Graphic User Interface     GUI  
+Terminal User Interface    TUI
+Touch,   
+API, SDk, Http, Api
+Prompt ChatUi
 
 learn once, use everywhere.
 
 一套"通用"的跨操作系统的快捷键操作电脑的接口, 主要应用场景是写代码, 也包含其它场景
+
+## 键盘语言的进化
+
+- 上下左右, PageUp, PageDown, Home, End
+- tab, alt
+- vim  hjkl  rino
+- sui  分层
+
 
 ## 面向人群
 - 在windows上希望用快捷键提高工作效率的
@@ -45,7 +59,7 @@ session(持久化)   tab和window的集合                     layout
 | --------------        | ------              | -------     | ------ | ------      |
 | 不用                  | hjk                 |             | typ    |             |
 | 保留原有意义          | zxcv                | cv大法      | zxcv   | cv大法      |
-| 小上 小下 小左 小右   | rino                | 右手        | ikjl   | 右手        |
+r| 小上 小下 小左 小右   | rino                | 右手        | ikjl   | 右手        |
 | 大上 大下 大左 大右   | dest                | 左手        | edsf   | 左手        |
 | 编辑                  | e                   | edit        | e      | edit        |
 | 新增                  | l                   | launch      | o      | open        |

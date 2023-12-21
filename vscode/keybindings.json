@@ -877,7 +877,7 @@
   {
     "key": "alt+v r b",
     "command": "extension.multiCommand.execute",
-    "iargs": {
+    "args": {
       "sequence": [
         "metaGo.jumpToBracket",
         "cursorRight",
@@ -1219,6 +1219,17 @@
     "when": "editorTextFocus",
   },
   {
+    "key": "alt+d v b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.selectToBracket",
+        "editor.action.deleteLines"
+      ],
+    },
+    "when": "editorTextFocus",
+  },
+  {
     "key": "alt+d i b",
     "command": "extension.multiCommand.execute",
     "args": {
@@ -1231,10 +1242,10 @@
   },
   {
     "key": "alt+d a b",
-    "command": "editor.action.selectToBracket",
+    "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
-        "bracketeer.selectBracketContent",
+        "editor.action.selectToBracket",
         "deleteLeft",
       ],
     },

@@ -114,15 +114,33 @@ map("i", "<a-g>o", "<C-o><Tab>", {})
 
 -- this function need flash plugin to be installed
 function sui_flash_jump()
+  local ok, _ = pcall(require, "flash")
+  if not ok then
+    vim.notify("please install flash plugin!!!", vim.log.levels.ERROR)
+	  vim.cmd("startinsert")
+    return
+  end
 	require("flash").jump()
 	vim.cmd("startinsert")
 end
 function sui_flash_treesitter()
+  local ok, _ = pcall(require, "flash")
+  if not ok then
+    vim.notify("please install flash plugin!!!", vim.log.levels.ERROR)
+	  vim.cmd("startinsert")
+    return
+  end
   local api = vim.api
   require("flash").treesitter()
   api.nvim_feedkeys(api.nvim_replace_termcodes("<C-G>", true, true, true), "n", false)
 end
 function sui_flash_treesitter_line()
+  local ok, _ = pcall(require, "flash")
+  if not ok then
+    vim.notify("please install flash plugin!!!", vim.log.levels.ERROR)
+	  vim.cmd("startinsert")
+    return
+  end
   local api = vim.api
   require("flash").treesitter()
   api.nvim_feedkeys(api.nvim_replace_termcodes("gH", true, true, true), "n", false)
@@ -141,7 +159,7 @@ map({ "i" }, "<a-m>f", "<C-o>o")
 map({ "i" }, "<a-m>rf", "<C-o>o")
 map({ "i" }, "<a-m>cf", "<C-o>o")
 
-map({ "i" }, "<C-CR>", "<C-o>o")
+map({ "i" }, "<wC-CR>", "<C-o>o")
 
 map({ "x" }, "<BS>", "<C-G>u<BS>")
 map({ "i" }, "<a-V>w", "<Esc>viwgH")

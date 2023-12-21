@@ -286,10 +286,11 @@ actions.viewGodoc = () =>
 
 const unmaps = {
   mappings: [
-    // "k",
-    // "j",
-    // "h",
-    // "l",
+    "q",
+    "k",
+    "j",
+    "h",
+    "l",
     // "e",
     // "d",
     // "E",
@@ -330,6 +331,8 @@ const unmaps = {
 }
 const maps = {}
 iunmap('<Ctrl-e>')
+// unmap('q')
+// map('l', "e")
 // alias 是你要所定义的快捷键
 // map 是surfingkeys原本的操作
 // callback 是你的快捷键按下所执行的函数, 和map不一起出现
@@ -475,7 +478,9 @@ maps.global = [
   },
   {
     alias: "ll",
+    category: "aa",
     callback: actions.vimEditURL,
+    description: "vim edit"
   },
   {
     alias: "lt",
@@ -519,12 +524,6 @@ const main = async () => {
   window.surfingKeys = api
   console.log("start map keys...")
 
-  if (conf.keys && conf.keys.maps) {
-    const { keys } = conf
-    const { maps, aliases = {} } = keys
-    registerKeys(maps, aliases, conf.siteleader)
-  }
-
   if (conf.keys && conf.keys.unmaps) {
     const { unmaps } = conf.keys
     if (unmaps.mappings) {
@@ -535,6 +534,12 @@ const main = async () => {
         items.forEach((v) => removeSearchAlias(v, leader))
       })
     }
+  }
+
+  if (conf.keys && conf.keys.maps) {
+    const { keys } = conf
+    const { maps, aliases = {} } = keys
+    registerKeys(maps, aliases, conf.siteleader)
   }
 }
 
