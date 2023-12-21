@@ -416,14 +416,26 @@
   // s and 文本对象  iw, aw,    w, iw, aw, 增加 nw, ow, rw
   // s, w, l, t, b, q, f, u     rb,rq,
   // d,y,v,c,gc,gu,gU,gs comment alt+c <alt>+c
-  {
-    "key": "alt+d",
-    "command": "editor.action.clipboardCutAction",
-    "when": "editorTextFocus && editorHasSelection",
-  },
+  // {
+  //   "key": "alt+d",
+  //   "command": "editor.action.clipboardCutAction",
+  //   "when": "editorTextFocus && editorHasSelection",
+  // },
   {
     "key": "alt+y",
-    "command": "editor.action.clipboardCopyAction",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
     "when": "editorTextFocus && editorHasSelection",
   },
   {
@@ -2642,21 +2654,21 @@
   {
     "key": "alt+y o i", // todo line and column number
     "command": "copyFilePath",
-    "when": "editorTextFocus",
+    "when": "editorTextFocus && !editorHasSelection",
   },
   {
     "key": "alt+y o n",
     "command": "copy-file-directory.copyFileNameWithExtension",
-    "when": "editorTextFocus",
+    "when": "editorTextFocus && !editorHasSelection",
   },
   {
     "key": "alt+y o d",
     "command": "copy-file-directory.copyFileDirectory",
-    "when": "editorTextFocus",
+    "when": "editorTextFocus && !editorHasSelection",
   },
   {
     "key": "alt+y o p",
     "command": "copyFilePath",
-    "when": "editorTextFocus",
+    "when": "editorTextFocus && !editorHasSelection",
   },
 ]
