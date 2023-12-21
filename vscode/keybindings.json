@@ -30,21 +30,6 @@
     "command": "notifications.hideList",
     "when": "notificationCenterVisible"
   },
-  {
-    "key": "alt+t i",
-    "command": "search.focus.nextInputBox",
-    "when": "!editorTextFocus && inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
-  },
-  {
-    "key": "alt+t r",
-    "command": "search.focus.previousInputBox",
-    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus",
-  },
-  {
-    "key": "alt+t r",
-    "command": "search.action.focusSearchFromResults",
-    "when": "firstMatchFocus && searchViewletVisible"
-  },
   // common interface
   {
     "key": "alt+w .",
@@ -94,7 +79,7 @@
   {
     "key": "alt+c",
     "command": "references-view.showOutgoingCalls",
-     "when": "focusedView == references-view.tree && !treeFindOpen && reference-list.source == callHierarchy && references-view.callHierarchyMode == showIncoming",
+    "when": "focusedView == references-view.tree && !treeFindOpen && reference-list.source == callHierarchy && references-view.callHierarchyMode == showIncoming",
   },
   {
     "key": "alt+c",
@@ -883,7 +868,7 @@
     "key": "alt+v a b",
     "command": "editor.action.selectToBracket",
     "when": "editorTextFocus && !editorHasSelection",
-  }, 
+  },
   {
     "key": "alt+c b b",
     "command": "bracketeer.changeBracketsTo",
@@ -2157,11 +2142,7 @@
     "args": {
       "sequence": [
         {
-          "command": "editor.actions.findWithArgs",
-          "args": {
-            "searchString": "${word}",
-            "replaceString": "aa",
-          },
+          "command": "actions.findWithSelection",
         },
       ],
     },
@@ -2207,7 +2188,7 @@
     "args": {
       "sequence": [
         {
-          "command": "actions.find",
+          "command": "actions.findWithSelection",
           "args": {
             "replaceString": "",
           },
@@ -2224,10 +2205,24 @@
         "cursorWordStartLeft",
         "cursorWordStartRightSelect",
         {
-          "command": "actions.find",
+          "command": "actions.findWithSelection",
           "args": {
             "replaceString": "",
           },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+m r c w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+        {
+          "command": "editor.action.startFindReplaceAction",
         },
       ],
     },
@@ -2245,7 +2240,7 @@
         "cursorLeftSelect",
         "metaGo.selectionSwitchActiveWithAnchor",
         {
-          "command": "actions.find",
+          "command": "actions.findWithSelection",
           "args": {
             "replaceString": "",
           },
@@ -2265,7 +2260,7 @@
         "cursorLeftSelect",
         "metaGo.selectionSwitchActiveWithAnchor",
         {
-          "command": "actions.find",
+          "command": "actions.findWithSelection",
           "args": {
             "replaceString": "",
           },
@@ -2298,6 +2293,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "${fileDirname}/**",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2317,6 +2313,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "${fileDirname}/**",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2340,6 +2337,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "${fileDirname}/**",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2358,6 +2356,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "${fileDirname}/**",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2375,6 +2374,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "query": "",
             "isRegex": true,
             "filesToInclude": "${fileDirname}/**",
@@ -2394,6 +2394,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "${workspaceFolder}/**",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2413,6 +2414,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "${workspaceFolder}/**",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2436,6 +2438,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "${workspaceFolder}/**",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2454,6 +2457,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "${workspaceFolder}/**",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2471,6 +2475,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "query": "",
             "isRegex": true,
             "filesToInclude": "${workspaceFolder}/**",
@@ -2490,6 +2495,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2509,6 +2515,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2532,6 +2539,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2550,6 +2558,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "isRegex": true,
             "filesToInclude": "",
             "filesToExclude": "*.exe,*.zip,*.msi,*.appimage,*.meta",
@@ -2567,6 +2576,7 @@
         {
           "command": "workbench.action.findInFiles",
           "args": {
+            "replace": "",
             "query": "",
             "isRegex": true,
             "filesToInclude": "",
@@ -2643,12 +2653,27 @@
   {
     "key": "alt+r",
     "command": "editor.action.previousMatchFindAction",
-    "when": "editorFocus && findInputFocussed",
+    "when": "editorFocus && findWidgetVisible",
   },
   {
     "key": "alt+i",
     "command": "editor.action.nextMatchFindAction",
-    "when": "editorFocus && findInputFocussed",
+    "when": "editorFocus && findWidgetVisible",
+  },
+  {
+    "key": "alt+r",
+    "command": "search.focus.previousInputBox",
+    "when": "inSearchEditor && inputBoxFocus || searchViewletVisible&& !findWidgetVisible"
+  },
+  {
+    "key": "alt+r",
+    "command": "search.action.focusSearchFromResults",
+    "when": "firstMatchFocus && searchViewletVisible && !findWidgetVisible"
+  },
+  {
+    "key": "alt+i",
+    "command": "search.focus.nextInputBox",
+    "when": "inSearchEditor && inputBoxFocus || searchViewletVisible && !findWidgetVisible"
   },
   // copy other
   {
