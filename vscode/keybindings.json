@@ -613,6 +613,11 @@
     "command": "metaGo.addCursorAfter",
     "when": "editorTextFocus",
   },
+  {
+    "key": "alt+t r s",
+    "command": "metaGo.addCursorAfter",
+    "when": "editorTextFocus",
+  },
   //mod:select       v
   {
     "key": "alt+v v",
@@ -658,8 +663,8 @@
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
-        "cursorWordStartLeft",
-        "cursorWordStartRightSelect",
+        "cursorWordLeft",
+        "cursorWordRightSelect",
       ],
     },
     "when": "editorTextFocus && !editorHasSelection",
@@ -679,8 +684,8 @@
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
-        "cursorWordStartLeft",
-        "cursorWordStartRightSelect",
+        "cursorWordLeft",
+        "cursorWordRightSelect",
       ],
     },
     "when": "editorTextFocus && !editorHasSelection",
@@ -690,8 +695,21 @@
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+v r w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
         "cursorWordLeft",
-        "cursorWordRightSelect",
+        "selectby.addNewSelection",
+        "cursorLeft",
+        "cursorWordStartRight",
       ],
     },
     "when": "editorTextFocus && !editorHasSelection",
@@ -824,6 +842,7 @@
       "sequence": [
         "cursorLineStart",
         "cursorLineEndSelect",
+        "cursorRightSelect",
       ],
     },
     "when": "editorTextFocus && !editorHasSelection",
@@ -852,22 +871,25 @@
     "key": "alt+v a b",
     "command": "editor.action.selectToBracket",
     "when": "editorTextFocus && !editorHasSelection",
+  }, 
+  {
+    "key": "alt+c b b",
+    "command": "bracketeer.changeBracketsTo",
+    "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    // todo 修改到更加符合sui的情况 
     "key": "alt+v r b",
     "command": "extension.multiCommand.execute",
-    "args": {
+    "iargs": {
       "sequence": [
-        // "metaGo.jumpToBracket",
-        // "cursorRight",
-        // "metaGo.jumpToBracket",
-        // "cursorLeftSelect",
-        // {
-        //   "command": "flexible-select.select",
-        //   "args": "bracket",
-        // },
-        "bracketeer.changeBracketsTo"
+        "metaGo.jumpToBracket",
+        "cursorRight",
+        "metaGo.jumpToBracket",
+        "metaGo.jumpToBracket",
+        "cursorLeft",
+        "selectby.addNewSelection",
+        "editor.action.jumpToBracket",
+        "cursorRightSelect",
       ],
     },
     "when": "editorTextFocus && !editorHasSelection",
@@ -1755,6 +1777,7 @@
       "sequence": [
         "cursorLineStart",
         "cursorLineEndSelect",
+        "cursorRightSelect",
         "editor.action.clipboardCopyAction",
         {
           "command": "delayedcommand.run",
@@ -1806,10 +1829,10 @@
   },
   {
     "key": "alt+y a b",
-    "command": "editor.action.selectToBracket",
+    "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
-        "bracketeer.selectBracketContent",
+        "editor.action.selectToBracket",
         "editor.action.clipboardCopyAction",
         {
           "command": "delayedcommand.run",
@@ -2100,10 +2123,20 @@
   // todo 
   //mod:upercase gu gU CamelCase
   //mod:align    ga
-  // todo 
   {
     "key": "alt+m l",
-    "command": "do what you like",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        {
+          "command": "editor.actions.findWithArgs",
+          "args": {
+            "searchString": "",
+            "replaceString": "",
+          },
+        }
+      ],
+    },
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
@@ -2114,7 +2147,8 @@
         {
           "command": "editor.actions.findWithArgs",
           "args": {
-            "replaceString": "",
+            "searchString": "${word}",
+            "replaceString": "aa",
           },
         },
       ],
@@ -2161,7 +2195,7 @@
     "args": {
       "sequence": [
         {
-          "command": "editor.actions.findWithArgs",
+          "command": "actions.find",
           "args": {
             "replaceString": "",
           },
@@ -2175,8 +2209,10 @@
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
         {
-          "command": "editor.actions.findWithArgs",
+          "command": "actions.find",
           "args": {
             "replaceString": "",
           },
@@ -2197,7 +2233,7 @@
         "cursorLeftSelect",
         "metaGo.selectionSwitchActiveWithAnchor",
         {
-          "command": "editor.actions.findWithArgs",
+          "command": "actions.find",
           "args": {
             "replaceString": "",
           },
@@ -2217,7 +2253,7 @@
         "cursorLeftSelect",
         "metaGo.selectionSwitchActiveWithAnchor",
         {
-          "command": "editor.actions.findWithArgs",
+          "command": "actions.find",
           "args": {
             "replaceString": "",
           },
