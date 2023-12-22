@@ -476,6 +476,40 @@
     "key": "alt+g o",
     "command": "workbench.action.navigateForward",
   },
+  {
+    "key": "alt+g d",
+    "command": "editor.action.goToDeclaration",
+  },
+  {
+    "key": "alt+g r",
+    "command": "editor.action.goToReferences",
+  },
+  {
+    "key": "alt+g i",
+    "command": "editor.action.goToImplementation",
+  },
+  {
+    // 从剪切板替换
+    "key": "alt+z r w",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "cursorWordLeft",
+        "cursorWordRightSelect",
+        "editor.action.clipboardPasteAction",
+      ],
+    },
+  },
+  {
+    "key": "alt+z r q",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "quickSelect.cursorQuoteSelect",
+        "editor.action.clipboardPasteAction",
+      ],
+    },
+  },
   //mod:to       t
   // word
   {
@@ -987,13 +1021,20 @@
   // word
   {
     "key": "alt+d w",
-    "command": "extension.multiCommand.execute",
+    "command": "repeat-commands.runSequence",
+    // "command": "extension.multiCommand.execute",
     "args": {
+      "commands": [
+        "cursorWordStartLeft",
+        "cursorWordStartRightSelect",
+        "deleteLeft",
+      ],
       "sequence": [
         "cursorWordStartLeft",
         "cursorWordStartRightSelect",
         "deleteLeft",
       ],
+      "repeat": "${getRepeatInput}", // to prompt the user for a 'repeat' number
     },
     "when": "editorTextFocus",
   },
@@ -2200,9 +2241,6 @@
       "sequence": [
         {
           "command": "actions.findWithSelection",
-          "args": {
-            "replaceString": "",
-          },
         },
       ],
     },
@@ -2252,9 +2290,6 @@
         "metaGo.selectionSwitchActiveWithAnchor",
         {
           "command": "actions.findWithSelection",
-          "args": {
-            "replaceString": "",
-          },
         }
       ],
     },
