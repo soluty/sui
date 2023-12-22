@@ -21,7 +21,7 @@ vim.cmd([[
 -- TODO: move to keymap file
 local map = vim.keymap.set
 -- no normal mode now..
-map("i", "<Esc>", "", {})
+-- map("i", "<Esc>", "", {})
 -- interface edit line
 map("i", "<C-e>", "", {})
 map("i", "<C-e>d", "<C-o>d0<C-o>d$", {})
@@ -134,6 +134,7 @@ function sui_flash_treesitter()
   require("flash").treesitter()
   api.nvim_feedkeys(api.nvim_replace_termcodes("<C-G>", true, true, true), "n", false)
 end
+
 function sui_flash_treesitter_line()
   local ok, _ = pcall(require, "flash")
   if not ok then
@@ -172,3 +173,14 @@ map({ "i" }, "<a-d>w", "<Esc>diwi")
 map({ "i" }, "<a-d>aw", "<Esc>dawi")
 map({ "i" }, "<a-y>w", "<Esc>yiwi")
 map({ "i" }, "<a-y>aw", "<Esc>yawi")
+
+map({ "n" }, "tnw", "b")
+map({ "n" }, "tow", "e")
+map({ "n" }, "tw", "w")
+
+map({ "o" }, "nw", "b")
+map({ "o" }, "ow", "e")
+map({ "o" }, "w", "iw")
+map({ "o" }, "np", "rw")
+map({ "o" }, "op", "b")
+map({ "o" }, "rp", "e")

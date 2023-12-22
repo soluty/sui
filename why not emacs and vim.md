@@ -31,6 +31,3 @@ hjkl只能用于标准布局,要用于其它布局, 则很麻烦, 如果映射�
 - 补充了vim的对象范围, 增加对象左边, 对象右边, 对象两边的范围.
 - 优化了vim中逻辑不太好的部分
 - 分层解决了快捷键冲突的问题
-C:\Users\soluty\vm\exports\sui\why not emacs and vim.md
-file:///C:/Users/soluty/vm/config/surfingkeys/setting.js
-file:///C:/Users/soluty/vm/exports/sui/surfingkeys/index.js

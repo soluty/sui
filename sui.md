@@ -248,7 +248,8 @@ alt+小左,alt+小右 选中状态中光标位置的切换.
 | 注释(comment)                           | gc             |
 | 对齐(align)                             | ga             |
 | 行选择(选中对象以后,再选中对象所在的行) | v              |
-| 其它操作(other)                         | co(字母)       |
+| 从剪切板替换                            | zr             |
+| 其它操作(other)                         | z()或者co()    |
 
 ga, gs, gu, gU
 
@@ -278,6 +279,8 @@ ga, gs, gu, gU
 | 对象所在的行   | v        |
 | 内部   in      | i        |
 | 外部   all     | a        |
+
+sui中的重复操作  leader+.
 
 ### 文本编辑器接口之查找/替换篇
 
@@ -328,12 +331,5 @@ leader+mr 作为替换的起手势(replace)
 | 对code的建议操作(code action) | ca       |
 | 格式化(code format)           | cf       |
 | 重命名(code rename)           | cr       |
-| 抽取方法(extract method)      | cm       |
+| 抽取方法(extract method)      | ce       |
 
-## 网络浏览器接口
-
-网页
-图片,视频,超链接
-
-55194110 派出所
-55137206 人社局
