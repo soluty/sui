@@ -1267,7 +1267,32 @@
         "editor.action.deleteLines"
       ],
     },
-    "when": "editorTextFocus",
+    "when": "editorTextFocus && !editorHasSelection",
+  },
+  {
+    "key": "alt+y v b",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.selectToBracket",
+        "bcjti.selectLine",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLineStartSelect",
+        "metaGo.selectionSwitchActiveWithAnchor",
+        "cursorLeftSelect",
+        "cursorLineEndSelect",
+        "cursorRightSelect",
+        "editor.action.clipboardCopyAction",
+        {
+          "command": "delayedcommand.run",
+          "args": {
+            "delay": 100,
+            "command": "cursorLeft",
+          },
+        },
+      ],
+    },
+    "when": "editorTextFocus && !editorHasSelection",
   },
   {
     "key": "alt+d i b",
