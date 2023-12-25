@@ -6,7 +6,7 @@ const {
   vmap,
   vmapkey,
   cmap,
-  cmapkey,
+  // cmapkey,
   imap,
   imapkey,
 
@@ -292,9 +292,12 @@ const unmaps = {
     "h",
     "l",
     "m",
-    // "e",
-    // "d",
-    // "E",
+    // "t",
+    "T",
+    "e",
+    "d",
+    "E",
+    // ".",
     // "sb",
     // "sw",
     // "ob",
@@ -332,6 +335,7 @@ const unmaps = {
 }
 const maps = {}
 iunmap('<Ctrl-e>')
+unmap('t')
 // unmap('q')
 // map('l', "e")
 // alias 是你要所定义的快捷键
@@ -381,13 +385,25 @@ maps.global = [
     description: "Scroll half page down",
   },
   {
-    alias: "n",
+    alias: "<Ctrl+Alt+n>",
     map: "E",
     description: "focus tab left",
   },
   {
-    alias: "o",
+    alias: "<Ctrl+Alt+o>",
     map: "R",
+    description: "focus tab right",
+  },
+  {
+    mode:"nv",
+    alias: "<Ctrl+Alt+i>",
+    map: "n",
+    description: "focus tab right",
+  },
+  {
+    mode:"nv",
+    alias: "<Ctrl+Alt+r>",
+    map: "N",
     description: "focus tab right",
   },
   // quit interface
@@ -476,7 +492,7 @@ maps.global = [
     mode: "niv",
     alias: "<Ctrl-Alt-l>t",
     callback: function () {
-      tabOpenLink("www.baidu.com")
+      tabOpenLink("www.bilibili.com")
     },
   },
   {
@@ -488,8 +504,12 @@ maps.global = [
   {
     alias: "lt",
     callback: function () {
-      tabOpenLink("www.baidu.com")
+      tabOpenLink("www.bilibili.com")
     },
+  },
+  {
+    alias: "lc",
+    callback: actions.editSettings,
   },
   // focus interface
   {
@@ -542,7 +562,55 @@ maps.global = [
     alias: "m<ArrowRight>",
     map: ">>",
   },
-  
+  {
+    mode: "niv",
+    alias: "<Ctrl+Alt+t>.",
+    map: "T",
+  },
+  {
+    mode: "nv",
+    alias: "t.",
+    map: "T",
+  },
+  {
+    mode: "nv",
+    alias: "te",
+    map: "gg",
+  },
+  {
+    mode: "nv",
+    alias: "toe",
+    map: "G",
+  },
+  {
+    mode: "nv",
+    alias: "tne",
+    map: "gg",
+  },
+  {
+    mode: "nv",
+    alias: "sz",
+    callback: function () {
+      var el = document.documentElement
+      if (document.fullscreenElement) {
+        document.exitFullscreen()
+      } else {
+        el.requestFullscreen()
+      }
+    },
+  },
+  {
+    mode: "niv",
+    alias: "<Ctrl+Alt+s>`z",
+    callback: function () {
+      var el = document.documentElement
+      if (document.fullscreenElement) {
+        document.exitFullscreen()
+      } else {
+        el.requestFullscreen()
+      }
+    },
+  },
 ]
 
 cmap('<ArrowLeft>', '<Ctrl-,>')
@@ -576,6 +644,12 @@ const conf = {
 const main = async () => {
   window.surfingKeys = api
   console.log("start map keys...")
+
+  if (conf.keys && conf.keys.maps) {
+    const { keys } = conf
+    const { maps, aliases = {} } = keys
+    registerKeys(maps, aliases, conf.siteleader)
+  }
 
   if (conf.keys && conf.keys.unmaps) {
     const { unmaps } = conf.keys
