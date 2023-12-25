@@ -6,6 +6,11 @@ Sleep 1000
 ctrl_b_var := false
 return
 $!v::
+if(alt_v_var){
+  Send !v
+  return
+}
+
 alt_v_var := true
 alt_vs_var := false
 ;Send !+v
@@ -84,6 +89,11 @@ return
   esc::
   Send {left}
   alt_v_var := false
+  alt_vs_var := false
+  CapsLock::
+  Send {left}
+  alt_v_var := false
+  alt_vs_var := false
   return
   PgUp::
   send +{PgUp}
@@ -110,7 +120,7 @@ return
   send +{right}
   return
   *w::
-  alt_v_var := false
+  ; alt_v_var := false
   if (GetKeyState("Shift","P")){
     send !v+w
     return
@@ -151,7 +161,7 @@ return
   return
   p::
   if(!alt_vs_var){
-    alt_v_var := false
+    ; alt_v_var := false
     send !vp
   } else {
     Send p
@@ -159,7 +169,7 @@ return
   return
   l::
   if(!alt_vs_var){
-    alt_v_var := false
+    ; alt_v_var := false
     send !vl
   } else {
     Send l
@@ -167,7 +177,7 @@ return
   return
   b::
   if(!alt_vs_var){
-    alt_v_var := false
+    ; alt_v_var := false
     send !vb
   } else {
     Send b
@@ -175,7 +185,7 @@ return
   return
   q::
   if(!alt_vs_var){
-    alt_v_var := false
+    ; alt_v_var := false
     send !vq
   } else {
     Send q
@@ -183,7 +193,7 @@ return
   return
   u::
   if(!alt_vs_var){
-    alt_v_var := false
+    ; alt_v_var := false
     send !vu
   } else {
     Send u
@@ -199,7 +209,7 @@ return
   return
   v::
   if(!alt_vs_var){
-    send !vv
+    send !+v
   } else {
     Send v
   }

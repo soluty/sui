@@ -651,7 +651,7 @@
   },
   //mod:select       v
   {
-    "key": "alt+v v",
+    "key": "alt+shift+v",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -663,7 +663,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   { //ops... this regular op need a little plugin....
-    "key": "alt+v v",
+    "key": "alt+shift+v",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -679,15 +679,15 @@
     "when": "editorTextFocus && editorHasSelection",
   },
   {
-    "key": "alt+i",
+    "key": "alt+v",
     "command": "editor.action.toggleColumnSelection",
     "when": "editorTextFocus && editorHasSelection",
   },
-  {
-    "key": "alt+r",
-    "command": "editor.action.toggleColumnSelection",
-    "when": "editorTextFocus && editorHasSelection",
-  },
+  // {
+  //   "key": "alt+v",
+  //   "command": "editor.action.toggleColumnSelection",
+  //   "when": "editorTextFocus && editorHasSelection",
+  // },
   // word
   {
     "key": "alt+v w",
@@ -2140,22 +2140,22 @@
   },
   //mod:copydown cd code format
   {
-    "key": "alt+c d",
+    "key": "alt+i",
     "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly",
+    "when": "editorTextFocus && !editorReadonly && editorHasSelection",
   },
   {
-    "key": "alt+c u",
+    "key": "alt+r",
     "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly ",
+    "when": "editorTextFocus && !editorReadonly && editorHasSelection",
   },
   {
-    "key": "alt+c alt+d",
+    "key": "alt+shift+i",
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly",
   },
   {
-    "key": "alt+c alt+u",
+    "key": "alt+shift+r",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly ",
   },
@@ -2698,7 +2698,12 @@
   // goto some where
   {
     "key": "alt+r",
-    "command": "editor.action.previousMatchFindAction",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.previousMatchFindAction",
+      ],
+    },
     "when": "editorFocus && findWidgetVisible",
   },
   {
@@ -2708,18 +2713,28 @@
   },
   {
     "key": "alt+r",
-    "command": "search.focus.previousInputBox",
-    "when": "inSearchEditor && inputBoxFocus || searchViewletVisible&& !findWidgetVisible"
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "search.focus.previousInputBox",
+      ],
+    },
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
   },
   {
     "key": "alt+r",
-    "command": "search.action.focusSearchFromResults",
-    "when": "firstMatchFocus && searchViewletVisible && !findWidgetVisible"
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "search.action.focusSearchFromResults",
+      ],
+    },
+    "when": "accessibilityModeEnabled && searchViewletVisible || firstMatchFocus && searchViewletVisible"
   },
   {
     "key": "alt+i",
     "command": "search.focus.nextInputBox",
-    "when": "inSearchEditor && inputBoxFocus || searchViewletVisible && !findWidgetVisible"
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
   },
   // copy other
   {
