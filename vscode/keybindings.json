@@ -1021,8 +1021,7 @@
   // word
   {
     "key": "alt+d w",
-    "command": "repeat-commands.runSequence",
-    // "command": "extension.multiCommand.execute",
+    "command": "extension.multiCommand.execute",
     "args": {
       "commands": [
         "cursorWordStartLeft",
@@ -2771,5 +2770,35 @@
     "key": "alt+c e",
     "command": "go.godoctor.extract",
     "when": "editorTextFocus && editorLangId == 'go'",
+  },
+  {
+    "key": "alt+g i",
+    "command": "editor.action.dirtydiff.next",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "alt+g i",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "alt+g i",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "alt+g r",
+    "command": "editor.action.dirtydiff.previous",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "alt+g r",
+    "command": "workbench.action.editor.previousChange",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "alt+g r",
+    "command": "workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorVisible"
   },
 ]

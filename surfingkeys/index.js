@@ -291,6 +291,7 @@ const unmaps = {
     "j",
     "h",
     "l",
+    "m",
     // "e",
     // "d",
     // "E",
@@ -430,7 +431,7 @@ maps.global = [
   // goto interface
   {
     mode: "niv",
-    alias: "<Ctrl-Alt-g>n",
+    aliais: "<Ctrl-Alt-g>n",
     map: "S",
     description: "go back",
   },
@@ -448,16 +449,18 @@ maps.global = [
   },
   {
     alias: "gn",
+    mode: "nv",
     map: "S",
     description: "go back",
   },
   {
+    mode: "nv",
     alias: "go",
     map: "D",
     description: "launch dev tools",
   },
   {
-    mode: "niv",
+    mode: "nv",
     alias: "g.",
     map: "H",
     description: "launch dev tools",
@@ -499,8 +502,58 @@ maps.global = [
     alias: "<Ctrl-Alt-o>",
     map: "R",
   },
+  {
+    mode: "niv",
+    alias: "<Ctrl-Alt-m>n",
+    map: "<<",
+  },
+  {
+    mode: "niv",
+    alias: "<Ctrl-Alt-m>o",
+    map: ">>",
+  },
+  {
+    mode: "niv",
+    alias: "<Ctrl-Alt-m><ArrowLeft>",
+    map: "<<",
+  },
+  {
+    mode: "niv",
+    alias: "<Ctrl-Alt-m><ArrowRight>",
+    map: ">>",
+  },
+  {
+    mode: "nv",
+    alias: "mn",
+    map: "<<",
+  },
+  {
+    mode: "nv",
+    alias: "mo",
+    map: ">>",
+  },
+  {
+    mode: "nv",
+    alias: "m<ArrowLeft>",
+    map: "<<",
+  },
+  {
+    mode: "nv",
+    alias: "m<ArrowRight>",
+    map: ">>",
+  },
   
 ]
+
+cmap('<ArrowLeft>', '<Ctrl-,>')
+cmap('<ArrowRight>', '<Ctrl-.>')
+cmap('<Home>', '<Ctrl-,>')
+cmap('<End>', '<Ctrl-.>')
+cmap('<PageUp>', '<Ctrl-,>')
+cmap('<PageDown>', '<Ctrl-.>')
+
+settings.omnibarMaxResults = 15
+settings.omnibarHistoryCacheSize = 10000
 
 maps["bilibili"] = [
   {
