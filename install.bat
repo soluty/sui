@@ -25,11 +25,13 @@ echo your keyboard layout is: %layout%
 setx SUI_ROOT %xdir%
 
 if not exist "%xdir%build" (
-  mkdir "%xdir%build"
+  md "%xdir%build"
 )
-
+if not exist "%xdir%build\%layout%" (
+  md "%xdir%build\%layout%"
+)
 echo copy src to build dir...
-xcopy /E /I "%xdir%src" "%xdir%build"
+xcopy /E /I "%xdir%src" "%xdir%build\%layout%"
 
 if %errorlevel%==0 (
   goto :installsui
@@ -48,10 +50,10 @@ echo install bin...
 call "%xdir%bin\install.bat" "%~1"
 
 REM exec sub dirs install.bat
-for /f %%i in ('dir /b /ad "%xdir%build"') do (
-  if exist "%xdir%build\%%i\install.bat" (
+for /f %%i in ('dir /b /ad "%xdir%build\%layout%"') do (
+  if exist "%xdir%build\%layout%\%%i\install.bat" (
     echo install %%i's config...
-    call "%xdir%build\%%i\install.bat" "%~1"
+    call "%xdir%build\%layout%\%%i\install.bat" "%~1"
     if %errorlevel%==0 (
       echo install %%i ok
     )

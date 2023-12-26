@@ -10,7 +10,7 @@ Sleep 1000
 ctrl_b_var_browser := false
 return
 #If (ctrl_b_var_browser)
-  q::
+  SUI_关闭::
   ctrl_b_var_browser := false
   Send ^{F4}
   return

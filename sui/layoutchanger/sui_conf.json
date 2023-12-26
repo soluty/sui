@@ -1,6 +1,7 @@
 {
   "files": [
-    "vscode/keybindings.json"
+    "vscode/keybindings.json",
+    "autohotkey/v1/browser.ahk"
   ],
   "keys": [
     "SUI_小上",

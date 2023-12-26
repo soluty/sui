@@ -72,17 +72,14 @@ func main() {
 			log.Fatalf("读取文件%v错误\n", file)
 		}
 		sedReader := engine.Wrap(bytes.NewReader(fileContent))
-		outfile, err := os.OpenFile(filepath.Join(suiRoot, "build", file), os.O_CREATE|os.O_WRONLY|os.O_TRUNC, os.ModePerm)
+		outfile, err := os.OpenFile(filepath.Join(suiRoot, "build", layout, file), os.O_CREATE|os.O_WRONLY|os.O_TRUNC, os.ModePerm)
 		if err != nil {
 			log.Fatalf("openfile %v err: %v\n", file, err)
 		}
 		_, err = io.Copy(outfile, sedReader)
-		// var outbytes bytes.Buffer
-		// _, err = io.Copy(&outbytes, sedReader)
 		if err != nil {
 			log.Fatalf("sed处理文件%v错误: %v\n", file, err)
 		}
-		// os.WriteFile(path.Join(suiRoot, "build", file), outbytes.Bytes(), os.ModePerm)
 	}
 	fmt.Println("sui转换布局", layout, "成功.")
 }

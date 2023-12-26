@@ -2,9 +2,12 @@
 setlocal enabledelayedexpansion
 set xdir=%~dp0
 
-md %APPDATA%\mouseable\configs
-
-if exist %APPDATA%\mouseable\configs\qwerty-wasd.json (
-  move %APPDATA%\mouseable\configs\qwerty-wasd.json  %APPDATA%\mouseable\configs\qwerty-wasd.json.bak
+if not exist "%APPDATA%\mouseable\configs" (
+  md "%APPDATA%\mouseable\configs"
 )
-mklink %APPDATA%\mouseable\configs\qwerty-wasd.json  "%xdir%\config.json"
+
+if exist "%APPDATA%\mouseable\configs\qwerty-wasd.json" (
+  del "%APPDATA%\mouseable\configs\qwerty-wasd.json.bak"
+  move "%APPDATA%\mouseable\configs\qwerty-wasd.json"  "%APPDATA%\mouseable\configs\qwerty-wasd.json.bak"
+)
+mklink "%APPDATA%\mouseable\configs\qwerty-wasd.json"  "%xdir%\config.json"
