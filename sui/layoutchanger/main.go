@@ -8,7 +8,7 @@ import (
 	"io"
 	"log"
 	"os"
-	"path"
+	"path/filepath"
 	"strings"
 
 	"github.com/rwtodd/Go.Sed/sed"
@@ -33,7 +33,7 @@ func main() {
 	if suiRoot == "" {
 		log.Fatal("必须设置环境变量SUI_ROOT, 请运行install.bat")
 	}
-	confBytes, err := os.ReadFile(path.Join(suiRoot, "sui", "layoutchanger", "sui_conf.json"))
+	confBytes, err := os.ReadFile(filepath.Join(suiRoot, "sui", "layoutchanger", "sui_conf.json"))
 	if err != nil {
 		log.Fatal("无法读取sui_conf.json")
 	}
@@ -67,17 +67,22 @@ func main() {
 	}
 	for _, file := range v.Files {
 		fmt.Println("sui开始处理文件", file)
-		fileContent, err := os.ReadFile(path.Join(suiRoot, file))
+		fileContent, err := os.ReadFile(filepath.Join(suiRoot, "src", file))
 		if err != nil {
 			log.Fatalf("读取文件%v错误\n", file)
 		}
 		sedReader := engine.Wrap(bytes.NewReader(fileContent))
-		var outbytes bytes.Buffer
-		_, err = io.Copy(&outbytes, sedReader)
+		outfile, err := os.OpenFile(filepath.Join(suiRoot, "build", file), os.O_CREATE|os.O_WRONLY|os.O_TRUNC, os.ModePerm)
 		if err != nil {
-			log.Fatalf("sed处理文件%v错误\n", file)
+			log.Fatalf("openfile %v err: %v\n", file, err)
 		}
-		os.WriteFile(path.Join(suiRoot, file), outbytes.Bytes(), os.ModePerm)
+		_, err = io.Copy(outfile, sedReader)
+		// var outbytes bytes.Buffer
+		// _, err = io.Copy(&outbytes, sedReader)
+		if err != nil {
+			log.Fatalf("sed处理文件%v错误: %v\n", file, err)
+		}
+		// os.WriteFile(path.Join(suiRoot, "build", file), outbytes.Bytes(), os.ModePerm)
 	}
 	fmt.Println("sui转换布局", layout, "成功.")
 }
