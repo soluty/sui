@@ -53,7 +53,7 @@ REM exec sub dirs install.bat
 for /f %%i in ('dir /b /ad "%xdir%build\%layout%"') do (
   if exist "%xdir%build\%layout%\%%i\install.bat" (
     echo install %%i's config...
-    call "%xdir%build\%layout%\%%i\install.bat" "%~1"
+    call "%xdir%build\%layout%\%%i\install.bat" "%layout%"
     if %errorlevel%==0 (
       echo install %%i ok
     )

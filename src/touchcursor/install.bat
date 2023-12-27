@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 set xdir=%~dp0
 set "layout=%~1"
-echo TouchCursor layoutis: %layout%
+echo TouchCursor layout is: %layout%
 if not exist "%USERPROFILE%\AppData\Roaming\TouchCursor" (
   md "%USERPROFILE%\AppData\Roaming\TouchCursor"
 )
