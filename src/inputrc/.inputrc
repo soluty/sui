@@ -3,20 +3,20 @@ set show-all-if-ambiguous on
 set completion-ignore-case on
 set emacs-mode-string ""
 $if mode=emacs
-"\C-e":
-"\C-es": backward-kill-line
-"\C-et": kill-line
-"\C-eu": undo
-"\C-eU": redo
-"\C-ed": kill-whole-line
-"\C-en": unix-word-rubout
-"\C-eo": kill-word
+"\C-SUI_行编辑":
+"\C-SUI_行编辑s": backward-kill-line
+"\C-SUI_行编辑t": kill-line
+"\C-SUI_行编辑u": undo
+"\C-SUI_行编辑U": redo
+"\C-SUI_行编辑d": kill-whole-line
+"\C-SUI_行编辑n": unix-word-rubout
+"\C-SUI_行编辑o": kill-word
 # TODO https://stackoverflow.com/questions/59771639/how-do-i-edit-current-shell-command-without-executing-it
-"\C-ee": edit-and-execute-command
-"\C-ey": kill-line
-"\C-ep": kill-line
-"\C-ef": "\C-]"
-"\C-eF": "\C-M-]"
+"\C-SUI_行编辑e": edit-and-execute-command
+"\C-SUI_行编辑y": kill-line
+"\C-SUI_行编辑p": kill-line
+"\C-SUI_行编辑f": "\C-]"
+"\C-SUI_行编辑F": "\C-M-]"
 
 # Home
 "\e[1~": beginning-of-line

@@ -4,7 +4,7 @@
  or WinActive("ahk_exe msedge.exe")
  or WinActive("ahk_exe vivaldi.exe")
  or WinActive("ahk_exe brave.exe")
-^b::
+^SUI_备份::
 ctrl_b_var_browser := true
 Sleep 1000
 ctrl_b_var_browser := false

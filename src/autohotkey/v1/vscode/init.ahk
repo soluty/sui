@@ -1,13 +1,13 @@
 ; backup interface
 #IfWinActive, ahk_exe Code.exe
-^b::
+^SUI_备份::
 ctrl_b_var := true
 Sleep 1000
 ctrl_b_var := false
 return
-$!v::
+$!SUI_选择模式::
 if(alt_v_var){
-  Send !v
+  Send !SUI_选择模式
   return
 }
 
@@ -19,14 +19,14 @@ return
 RCtrl::Alt
 AppsKey::Alt
 
-!*s::
+!*SUI_大小::
 if (GetKeyState("Shift","P")){
   alt_s_var := true
   return
 }
 alt_s_var := false
 ;alt_xiaos_var := true
-Send !s
+Send !SUI_大小
 return
 #IfWinActive
 
@@ -39,34 +39,34 @@ return
   Send {Left}
   alt_s_var := false
   return
-  r::
-  Send !+sr
+  SUI_小上::
+  Send !+SUI_大小SUI_小上
   return
-  i::
-  Send !+si
+  SUI_小下::
+  Send !+SUI_大小SUI_小下
   return
-  n::
-  Send !+sn
+  SUI_小左::
+  Send !+SUI_大小SUI_小左
   return
-  o::
-  Send !+so
+  SUI_小右::
+  Send !+SUI_大小SUI_小右
   return
   u::
-  Send !+su
+  Send !+SUI_大小u
   return
   d::
-  Send !+sd
+  Send !+SUI_大小d
   return
   s::
-  Send !+ss
+  Send !+SUI_大小s
   return
   m::
   alt_s_var := false
-  Send !+sm
+  Send !+SUI_大小m
   return
   z::
   alt_s_var := false
-  Send !+sz
+  Send !+SUI_大小z
   return
 #If
 
@@ -119,115 +119,115 @@ return
   right::
   send +{right}
   return
-  *w::
+  *SUI_窗口::
   ; alt_v_var := false
   if (GetKeyState("Shift","P")){
-    send !v+w
+    send !SUI_选择模式+SUI_窗口
     return
   }
-  send !vw
+  send !SUI_选择模式SUI_窗口
   return
-  a::
+  SUI_对象外部::
   if(!alt_vs_var){
     alt_v_var := false
-    send !va
+    send !SUI_选择模式SUI_对象外部
   } else {
-    Send a
+    Send SUI_对象外部
   }
   return
-  i::
+  SUI_对象内部::
   if(!alt_vs_var){
     alt_v_var := false
-    send !vi
+    send !SUI_选择模式SUI_对象内部
   } else {
-    Send i
+    Send SUI_对象内部
   }
   return
-  n::
+  SUI_小左::
   if(!alt_vs_var){
     alt_v_var := false
-    send !vn
+    send !SUI_选择模式SUI_小左
   } else {
-    Send n
+    Send SUI_小左
   }
   return
-  o::
+  SUI_小右::
   if(!alt_vs_var){
     alt_v_var := false
-    send !vo
+    send !SUI_选择模式SUI_小右
   } else {
-    Send o
+    Send SUI_小右
   }
   return
-  p::
+  SUI_粘贴::
   if(!alt_vs_var){
     ; alt_v_var := false
-    send !vp
+    send !SUI_选择模式SUI_粘贴
   } else {
-    Send p
+    Send SUI_粘贴
   }
   return
-  l::
+  SUI_打开::
   if(!alt_vs_var){
     ; alt_v_var := false
-    send !vl
+    send !SUI_选择模式SUI_打开
   } else {
-    Send l
+    Send SUI_打开
   }
   return
-  b::
+  SUI_备份::
   if(!alt_vs_var){
     ; alt_v_var := false
-    send !vb
+    send !SUI_选择模式SUI_备份
   } else {
-    Send b
+    Send SUI_备份
   }
   return
-  q::
+  SUI_关闭::
   if(!alt_vs_var){
     ; alt_v_var := false
-    send !vq
+    send !SUI_选择模式SUI_关闭
   } else {
-    Send q
+    Send SUI_关闭
   }
   return
-  u::
+  e::
   if(!alt_vs_var){
     ; alt_v_var := false
-    send !vu
+    send !SUI_选择模式e
   } else {
-    Send u
+    Send e
   }
   return
-  r::
+  SUI_对象两边::
   if(!alt_vs_var){
     alt_v_var := false
-    send !vr
+    send !SUI_选择模式SUI_对象两边
   } else {
-    Send r
+    Send SUI_对象两边
   }
   return
-  v::
+  SUI_选择模式::
   if(!alt_vs_var){
-    send !+v
+    send !+SUI_选择模式
   } else {
-    Send v
+    Send SUI_选择模式
   }
   return
-  s::
+  SUI_大小::
   alt_vs_var := true
-  send !vs
+  send !SUI_选择模式SUI_大小
   return
-  !y::
+  !SUI_拷贝::
   alt_v_var := false
-  send !y
+  send !SUI_拷贝
   return
-  !m::
+  !SUI_移动::
   alt_v_var := false
-  send !m
+  send !SUI_移动
   return
-  !s::
+  !SUI_大小::
   alt_v_var := false
-  send !s
+  send !SUI_大小
   return
 #if

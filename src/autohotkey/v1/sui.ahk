@@ -4,7 +4,7 @@ EnvGet, SUI_ROOT, SUI_ROOT
 EnvGet, SystemRoot, SystemRoot
 EnvGet, SUI_MODULES, SUI_MODULES
 EnvGet, SUI_WM, SUI_WM
-ToolTip reloadsuiok...
+ToolTip reload sui ok...
 Sleep 500
 ToolTip
 
@@ -172,9 +172,9 @@ AppsKey & End::Send ^!{End}
 #IfWinNotActive
 
 ; interface mouse use mouseable
-$^p::
+$^SUI_鼠标::
 if (SUI_WM_FALL_THROUGH) {
-  Send ^p
+  Send ^SUI_鼠标
   return
 }
 WinGetActiveStats, Title, Width, Height, X, Y
@@ -201,26 +201,26 @@ else
 }
 return
 
-^.::
+^SUI_句号::
 ctrl_dot_var := true
 Sleep 1000
 ctrl_dot_var := false
 return
 #If (ctrl_dot_var)
-  .::
+  SUI_句号::
   ctrl_dot_var := false
   Reload
   return
 #If
 
 ; copy paste interface
-^y::
+^SUI_拷贝::
 ctrl_y_var := true
 Sleep 1000
 ctrl_y_var := false
 return
 #If (ctrl_y_var)
-  y::
+  SUI_拷贝::
   ctrl_y_var := false
   Run "%SUI_ROOT%\sui\bin\ScreenCapture.exe"
   return
@@ -234,7 +234,7 @@ return
   ctrl_y_var := false
   Run, "%SystemRoot%\system32\SnippingTool.exe"
   Sleep 500
-  Send !mr
+  Send !m
   return
   .::
   ctrl_y_var := false
@@ -296,7 +296,7 @@ return
     }
   }
   return
-  p::
+  SUI_粘贴::
   ctrl_y_var := false
   ctrl_yp_var := true
   return
@@ -337,51 +337,51 @@ return
 
 
 ; find window interface
-^w::
+^SUI_窗口::
 if (SUI_WM_FALL_THROUGH) {
-  Send ^w
+  Send ^SUI_窗口
   return
 }
-ctrl_w_var := true
+ctrl_w_var_sui := true
 return
-#If (ctrl_w_var)
-  !r::
+#If (ctrl_w_var_sui)
+  !SUI_小i::
   Send {Up}
   return
-  !i::
+  !SUI_小k::
   Send {Down}
   return
-  !n::
+  !SUI_小j::
   Send {Left}
   return
-  !o::
+  !SUI_小l::
   Send {Right}
   return
-  .::
+  SUI_句号::
   Send  {Alt Down}{Tab Down}
   return
   !Esc::
-  ctrl_w_var := false
+  ctrl_w_var_sui := false
   Send {Tab Up}{Alt Up}
   return
   !CapsLock::
-  ctrl_w_var := false
+  ctrl_w_var_sui := false
   Send {Tab Up}{Alt Up}
   return
   !Enter::
-  ctrl_w_var := false
+  ctrl_w_var_sui := false
   Send {Tab Up}{Alt Up}
   return
   Esc::
-  ctrl_w_var := false
+  ctrl_w_var_sui := false
   Send {Tab Up}{Alt Up}
   return
   CapsLock::
-  ctrl_w_var := false
+  ctrl_w_var_sui := false
   Send {Tab Up}{Alt Up}
   return
   Enter::
-  ctrl_w_var := false
+  ctrl_w_var_sui := false
   Send {Tab Up}{Alt Up}
   return
 #If

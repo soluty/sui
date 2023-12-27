@@ -1,4 +1,4 @@
-#IfWinActive, ahk_exe Explorer.EXE
+#If (!ctrl_w_var_sui and WinActive("ahk_exe Explorer.EXE"))
 !y::
 alt_y_var := true
 Sleep 1000

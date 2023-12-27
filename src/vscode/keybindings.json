@@ -32,47 +32,47 @@
   },
   // common interface
   {
-    "key": "alt+w .",
+    "key": "alt+SUI_窗口 .",
     "command": "workbench.action.quickOpenView",
   },
   {
-    "key": "alt+w t",
+    "key": "alt+SUI_窗口 t",
     "command": "workbench.action.terminal.focus",
   },
   {
-    "key": "alt+w e",
+    "key": "alt+SUI_窗口 e",
     "command": "workbench.explorer.fileView.focus",
   },
   {
-    "key": "alt+w o",
+    "key": "alt+SUI_窗口 o",
     "command": "workbench.panel.output.focus",
   },
   {
-    "key": "alt+w g",
+    "key": "alt+SUI_窗口 g",
     "command": "workbench.view.scm",
   },
   {
-    "key": "alt+w p",
+    "key": "alt+SUI_窗口 p",
     "command": "workbench.extensions.action.focusExtensionsView",
   },
   {
-    "key": "alt+w h",
+    "key": "alt+SUI_窗口 h",
     "command": "editor.action.showDefinitionPreviewHover",
   },
   {
-    "key": "alt+w w",
+    "key": "alt+SUI_窗口 w",
     "command": "editor.action.showDefinitionPreviewHover",
   },
   {
-    "key": "alt+w alt+w",
+    "key": "alt+SUI_窗口 alt+SUI_窗口",
     "command": "editor.action.showDefinitionPreviewHover",
   },
   {
-    "key": "alt+w m",
+    "key": "alt+SUI_窗口 m",
     "command": "workbench.action.focusTitleBar",
   },
   {
-    "key": "alt+w c",
+    "key": "alt+SUI_窗口 c",
     "command": "references-view.showCallHierarchy",
     "when": "editorHasCallHierarchyProvider && editorTextFocus && !inReferenceSearchEditor",
   },
@@ -87,55 +87,55 @@
     "when": "focusedView == references-view.tree && !treeFindOpen && reference-list.source == callHierarchy && references-view.callHierarchyMode == showOutgoing",
   },
   {
-    "key": "alt+l .",
+    "key": "alt+SUI_打开 .",
     "command": "workbench.action.showCommands",
   },
   //// editor text
   // launch interface
   {
-    "key": "alt+l h",
+    "key": "alt+SUI_打开 h",
     "command": "workbench.action.splitEditorDown",
   },
   {
-    "key": "alt+l v",
+    "key": "alt+SUI_打开 v",
     "command": "workbench.action.splitEditorRight",
   },
   {
-    "key": "alt+l c",
+    "key": "alt+SUI_打开 c",
     "command": "workbench.action.openGlobalKeybindingsFile",
   },
   {
-    "key": "alt+l r",
+    "key": "alt+SUI_打开 r",
     "command": "workbench.action.reloadWindow",
   },
   {
-    "key": "alt+l n f",
+    "key": "alt+SUI_打开 n f",
     "command": "workbench.action.files.newFile",
   },
   // focus interface
   {
-    "key": "alt+n",
+    "key": "alt+SUI_小左",
     "command": "workbench.action.focusLeftGroup",
   },
   {
-    "key": "alt+o",
+    "key": "alt+SUI_小右",
     "command": "workbench.action.focusRightGroup",
   },
   {
-    "key": "alt+r",
+    "key": "alt+SUI_小上",
     "command": "workbench.action.focusAboveGroup",
   },
   {
-    "key": "alt+i",
+    "key": "alt+SUI_小下",
     "command": "workbench.action.focusBelowGroup",
   },
   {
-    "key": "alt+n",
+    "key": "alt+SUI_小左",
     "command": "metaGo.selectionSwitchActiveWithAnchor",
     "when": "textInputFocus && editorHasSelection",
   },
   {
-    "key": "alt+o",
+    "key": "alt+SUI_小右",
     "command": "metaGo.selectionSwitchActiveWithAnchor",
     "when": "textInputFocus && editorHasSelection",
   },
@@ -150,7 +150,7 @@
     "when": "editorFocus"
   },
   {
-    "key": "alt+w left",
+    "key": "alt+SUI_窗口 left",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -160,7 +160,7 @@
     },
   },
   {
-    "key": "alt+w right",
+    "key": "alt+SUI_窗口 right",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -170,59 +170,59 @@
     },
   },
   {
-    "key": "alt+w up",
+    "key": "alt+SUI_窗口 up",
     "command": "workbench.action.focusActiveEditorGroup",
   },
   {
-    "key": "alt+w down",
+    "key": "alt+SUI_窗口 down",
     "command": "workbench.action.focusPanel",
   },
   // quit interface
   {
-    "key": "alt+q q",
+    "key": "alt+SUI_关闭 SUI_关闭",
     "command": "workbench.action.closeActiveEditor",
     // "when": "editorFocus",
   },
   {
-    "key": "alt+q t",
+    "key": "alt+SUI_关闭 SUI_标签",
     "command": "workbench.action.closeEditorsAndGroup",
     "when": "editorFocus",
   },
   {
-    "key": "alt+q o",
+    "key": "alt+SUI_关闭 o",
     "command": "workbench.action.closeOtherEditors",
   },
   {
-    "key": "alt+q n",
+    "key": "alt+SUI_关闭 n",
     "command": "workbench.action.editorLayoutSingle",
   },
   {
-    "key": "alt+q a",
+    "key": "alt+SUI_关闭 a",
     "command": "workbench.action.closeWindow",
   },
   // size interface
   {
-    "key": "alt+shift+s n",
+    "key": "alt+shift+SUI_大小 SUI_小左",
     "command": "workbench.action.decreaseViewWidth",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+shift+s o",
+    "key": "alt+shift+SUI_大小 SUI_小右",
     "command": "workbench.action.increaseViewWidth",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+shift+s i",
+    "key": "alt+shift+SUI_大小 SUI_小下",
     "command": "workbench.action.decreaseViewHeight",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+shift+s r",
+    "key": "alt+shift+SUI_大小 SUI_小上",
     "command": "workbench.action.increaseViewHeight",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+shift+s m",
+    "key": "alt+shift+SUI_大小 m",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -233,36 +233,36 @@
     },
   },
   {
-    "key": "alt+shift+s z",
+    "key": "alt+shift+SUI_大小 z",
     "command": "workbench.action.toggleZenMode",
   },
   {
-    "key": "alt+shift+s u",
+    "key": "alt+shift+SUI_大小 u",
     "command": "editor.action.fontZoomIn",
   },
   {
-    "key": "alt+shift+s d",
+    "key": "alt+shift+SUI_大小 d",
     "command": "editor.action.fontZoomOut",
   },
   {
-    "key": "alt+shift+s s",
+    "key": "alt+shift+SUI_大小 s",
     "command": "editor.action.fontZoomReset",
   },
   // move interface
   {
-    "key": "alt+shift+m n",
+    "key": "alt+shift+SUI_移动 SUI_小左",
     "command": "workbench.action.moveActiveEditorGroupLeft",
   },
   {
-    "key": "alt+shift+m o",
+    "key": "alt+shift+SUI_移动 SUI_小右",
     "command": "workbench.action.moveActiveEditorGroupRight",
   },
   {
-    "key": "alt+shift+m i",
+    "key": "alt+shift+SUI_移动 SUI_小下",
     "command": "workbench.action.moveActiveEditorGroupDown",
   },
   {
-    "key": "alt+shift+m r",
+    "key": "alt+shift+SUI_移动 SUI_小上",
     "command": "workbench.action.moveActiveEditorGroupUp",
   },
   //// bottom panel
@@ -277,28 +277,28 @@
     "when": "panelFocus"
   },
   {
-    "key": "alt+l v",
+    "key": "alt+SUI_打开 v",
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus"
   },
   {
-    "key": "alt+s m",
+    "key": "alt+SUI_大小 m",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminalFocus"
   },
   {
-    "key": "alt+q q",
+    "key": "alt+SUI_关闭 q",
     "command": "workbench.action.closePanel",
     "when": "panelFocus"
   },
   {
-    "key": "alt+q q",
+    "key": "alt+SUI_关闭 q",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
   //// sidebar
   {
-    "key": "alt+q q",
+    "key": "alt+SUI_关闭 q",
     "command": "workbench.action.closeSidebar",
     "when": "sideBarFocus"
   },
@@ -323,7 +323,7 @@
     "when": "sideBarFocus"
   },
   {
-    // "key": "alt+r",
+    // "key": "alt+SUI_小上",
     // "command": "workbench.action.showCommands",
     // "when": "editorTextFocus"
     // workbench.action.focusTitleBar
@@ -335,7 +335,7 @@
     // "when": "listFocus && !inputFocus",
   },
   {
-    "key": "alt+i",
+    "key": "alt+SUI_小下",
     "command": "command-runner.run",
     "args": {
       "command": "\"%ProgramFiles%/AutoHotkey/AutoHotkey.exe\" %SUI_ROOT%/autohotkey/v1/vscode/viewcontainer_focus_down.ahk",
@@ -344,7 +344,7 @@
     "when": "sideBarFocus",
   },
   {
-    "key": "alt+r",
+    "key": "alt+SUI_小上",
     "command": "command-runner.run",
     "args": {
       "command": "\"%ProgramFiles%/AutoHotkey/AutoHotkey.exe\" %SUI_ROOT%/autohotkey/v1/vscode/viewcontainer_focus_up.ahk",
@@ -354,28 +354,28 @@
   },
   //// right sidebari
   {
-    "key": "alt+q q",
+    "key": "alt+SUI_关闭",
     "command": "workbench.action.closeAuxiliaryBar",
     "when": "auxiliaryBarFocus"
   },
   // coding interface
   {
-    "key": "alt+s",
+    "key": "alt+SUI_大小",
     "command": "list.find",
     "when": "listFocus && listSupportsFind"
   },
   {
-    "key": "alt+s",
+    "key": "alt+SUI_大小",
     "command": "metaGo.gotoSmart",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+v s",
+    "key": "alt+SUI_选择模式 SUI_大小",
     "command": "metaGo.selectSmart",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+y s",
+    "key": "alt+SUI_拷贝 SUI_大小",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -394,7 +394,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d s",
+    "key": "alt+SUI_删除  SUI_大小",
     "command": "metaGo.metaJump.deleteToSmart",
     "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus",
   },
@@ -402,12 +402,12 @@
   // s, w, l, t, b, q, f, u     rb,rq,
   // d,y,v,c,gc,gu,gU,gs comment alt+c <alt>+c
   // {
-  //   "key": "alt+d",
+  //   "key": "alt+SUI_删除 ",
   //   "command": "editor.action.clipboardCutAction",
   //   "when": "editorTextFocus && editorHasSelection",
   // },
   {
-    "key": "alt+y",
+    "key": "alt+SUI_拷贝",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -429,27 +429,27 @@
     "when": "editorTextFocus && !editorReadonly",
   },
   {
-    "key": "alt+g u u",
+    "key": "alt+SUI_直跳 c c",
     "command": "editor.action.commentLine",
     "when": "editorTextFocus && !editorReadonly",
   },
   {
-    "key": "alt+d",
+    "key": "alt+SUI_删除 ",
     "command": "editor.action.clipboardCutAction",
     "when": "editorTextFocus && editorHasSelection",
   },
   {
-    "key": "alt+d d",
+    "key": "alt+SUI_删除 d",
     "command": "editor.action.deleteLines",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d alt+d",
+    "key": "alt+SUI_删除 SUI_对象外部lt+SUI_删除 ",
     "command": "editor.action.deleteLines",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+p",
+    "key": "alt+SUI_粘贴",
     "command": "editor.action.clipboardPasteAction",
   },
   {
@@ -464,28 +464,23 @@
   },
   // object, w,W,l,q,b,f,
   {
-    "key": "h",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && editorHasSelection",
-  },
-  {
-    "key": "alt+g n",
+    "key": "alt+SUI_直跳 SUI_小左",
     "command": "workbench.action.navigateBack",
   },
   {
-    "key": "alt+g o",
+    "key": "alt+SUI_直跳 SUI_小右",
     "command": "workbench.action.navigateForward",
   },
   {
-    "key": "alt+g d",
+    "key": "alt+SUI_直跳 d",
     "command": "editor.action.goToDeclaration",
   },
   {
-    "key": "alt+g r",
+    "key": "alt+SUI_直跳 r",
     "command": "editor.action.goToReferences",
   },
   {
-    "key": "alt+g i",
+    "key": "alt+SUI_直跳 i",
     "command": "editor.action.goToImplementation",
   },
   {
@@ -513,76 +508,76 @@
   //mod:to       t
   // word
   {
-    "key": "alt+t w",
+    "key": "alt+SUI_跳转 w",
     "command": "cursorWordStartRight",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t n w",
+    "key": "alt+SUI_跳转 SUI_小左 w",
     "command": "cursorWordStartLeft",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t o w",
+    "key": "alt+SUI_跳转 SUI_小右 w",
     "command": "cursorWordStartRight",
     "when": "editorTextFocus",
   },
   // big word
   {
-    "key": "alt+t shift+w",
+    "key": "alt+SUI_跳转 shift+w",
     "command": "metaGo.cursorSpaceWordRight",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t n shift+w",
+    "key": "alt+SUI_跳转 SUI_小左 shift+w",
     "command": "metaGo.cursorSpaceWordLeft",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t o shift+w",
+    "key": "alt+SUI_跳转 SUI_小右 shift+w",
     "command": "metaGo.cursorSpaceWordRight",
     "when": "editorTextFocus",
   },
   // paragraphs
   {
-    "key": "alt+t p",
+    "key": "alt+SUI_跳转 p",
     "command": "metaGo.gotoEmptyLineDown",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t n p",
+    "key": "alt+SUI_跳转 SUI_小左 p",
     "command": "metaGo.gotoEmptyLineUp",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t o p",
+    "key": "alt+SUI_跳转 SUI_小右 p",
     "command": "metaGo.gotoEmptyLineDown",
     "when": "editorTextFocus",
   },
   // line
   {
-    "key": "alt+t l",
+    "key": "alt+SUI_跳转 l",
     "command": "workbench.action.gotoLine",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t n l",
+    "key": "alt+SUI_跳转 SUI_小左 l",
     "command": "cursorLineStart",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t o l",
+    "key": "alt+SUI_跳转 SUI_小右 l",
     "command": "cursorLineEnd",
     "when": "editorTextFocus",
   },
   // bracket
   {
-    "key": "alt+t b",
+    "key": "alt+SUI_跳转 b",
     "command": "editor.action.jumpToBracket",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t n b",
+    "key": "alt+SUI_跳转 SUI_小左 b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -594,7 +589,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t o b",
+    "key": "alt+SUI_跳转 SUI_小右 b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -608,50 +603,50 @@
   },
   // quote
   {
-    "key": "alt+t q",
+    "key": "alt+SUI_跳转 q",
     "command": "quickSelect.cursorQuoteEnd",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t n q",
+    "key": "alt+SUI_跳转 SUI_小左 q",
     "command": "quickSelect.cursorQuoteStart",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t o q",
+    "key": "alt+SUI_跳转 SUI_小右 q",
     "command": "quickSelect.cursorQuoteEnd",
     "when": "editorTextFocus",
   },
   // universe
   {
-    "key": "alt+t u",
+    "key": "alt+SUI_跳转 u",
     "command": "cursorTop",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t n u",
+    "key": "alt+SUI_跳转 SUI_小左 u",
     "command": "cursorTop",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t o u",
+    "key": "alt+SUI_跳转 SUI_小右 u",
     "command": "cursorBottom",
     "when": "editorTextFocus",
   },
   // search
   {
-    "key": "alt+t s",
+    "key": "alt+SUI_跳转 s",
     "command": "metaGo.addCursorAfter",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+t r s",
+    "key": "alt+SUI_跳转 SUI_对象两边 s",
     "command": "metaGo.addCursorAfter",
     "when": "editorTextFocus",
   },
   //mod:select       v
   {
-    "key": "alt+shift+v",
+    "key": "alt+shift+SUI_选择模式",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -663,7 +658,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   { //ops... this regular op need a little plugin....
-    "key": "alt+shift+v",
+    "key": "alt+shift+SUI_选择模式",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -679,18 +674,18 @@
     "when": "editorTextFocus && editorHasSelection",
   },
   {
-    "key": "alt+v",
+    "key": "alt+SUI_选择模式",
     "command": "editor.action.toggleColumnSelection",
     "when": "editorTextFocus && editorHasSelection",
   },
   // {
-  //   "key": "alt+v",
+  //   "key": "alt+SUI_选择模式",
   //   "command": "editor.action.toggleColumnSelection",
   //   "when": "editorTextFocus && editorHasSelection",
   // },
   // word
   {
-    "key": "alt+v w",
+    "key": "alt+SUI_选择模式 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -701,17 +696,17 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v n w",
+    "key": "alt+SUI_选择模式 SUI_小左 w",
     "command": "cursorWordLeftSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v o w",
+    "key": "alt+SUI_选择模式 SUI_小右 w",
     "command": "cursorWordRightSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v i w",
+    "key": "alt+SUI_选择模式 SUI_对象内部 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -722,7 +717,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v a w",
+    "key": "alt+SUI_选择模式 SUI_对象外部 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -733,7 +728,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v r w",
+    "key": "alt+SUI_选择模式 SUI_对象两边 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -747,7 +742,7 @@
   },
   // big word
   {
-    "key": "alt+v shift+w",
+    "key": "alt+SUI_选择模式 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -758,17 +753,17 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v n shift+w",
+    "key": "alt+SUI_选择模式 SUI_小左 shift+w",
     "command": "metaGo.cursorSpaceWordLeftSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v o shift+w",
+    "key": "alt+SUI_选择模式 SUI_小右 shift+w",
     "command": "metaGo.cursorSpaceWordRightSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v i shift+w",
+    "key": "alt+SUI_选择模式 SUI_对象内部 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -779,7 +774,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v a shift+w",
+    "key": "alt+SUI_选择模式 SUI_对象外部 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -791,7 +786,7 @@
   },
   // paragraphs
   {
-    "key": "alt+v p",
+    "key": "alt+SUI_选择模式 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -802,17 +797,17 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v n p",
+    "key": "alt+SUI_选择模式 SUI_小左 p",
     "command": "metaGo.selectEmptyLineUp",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v o p",
+    "key": "alt+SUI_选择模式 SUI_小右 p",
     "command": "metaGo.selectEmptyLineDown",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v i p",
+    "key": "alt+SUI_选择模式 SUI_对象内部 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -823,7 +818,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v a p",
+    "key": "alt+SUI_选择模式 SUI_对象外部 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -835,7 +830,7 @@
   },
   // line
   {
-    "key": "alt+v l",
+    "key": "alt+SUI_选择模式 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -846,17 +841,17 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v n l",
+    "key": "alt+SUI_选择模式 SUI_小左 l",
     "command": "cursorLineStartSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v o l",
+    "key": "alt+SUI_选择模式 SUI_小右 l",
     "command": "cursorLineEndSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v i l",
+    "key": "alt+SUI_选择模式 SUI_对象内部 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -867,7 +862,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v a l",
+    "key": "alt+SUI_选择模式 SUI_对象外部 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -880,12 +875,12 @@
   },
   // bracket
   {
-    "key": "alt+v b",
+    "key": "alt+SUI_选择模式 b",
     "command": "bracketeer.selectBracketContent",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v i b",
+    "key": "alt+SUI_选择模式 SUI_对象内部 b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -899,7 +894,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v a b",
+    "key": "alt+SUI_选择模式 SUI_对象外部 b",
     "command": "editor.action.selectToBracket",
     "when": "editorTextFocus && !editorHasSelection",
   },
@@ -909,7 +904,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v r b",
+    "key": "alt+SUI_选择模式 SUI_对象两边 b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -927,27 +922,27 @@
   },
   // quote
   {
-    "key": "alt+v q",
+    "key": "alt+SUI_选择模式 q",
     "command": "quickSelect.cursorQuoteSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v n q",
+    "key": "alt+SUI_选择模式 SUI_小左 q",
     "command": "quickSelect.cursorQuoteStartSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v o q",
+    "key": "alt+SUI_选择模式 SUI_小右 q",
     "command": "quickSelect.cursorQuoteEndSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v i q",
+    "key": "alt+SUI_选择模式 SUI_对象内部 q",
     "command": "quickSelect.cursorQuoteSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v a q",
+    "key": "alt+SUI_选择模式 SUI_对象外部 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -962,7 +957,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v r q",
+    "key": "alt+SUI_选择模式 SUI_对象两边 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -975,7 +970,7 @@
   },
   // universe
   {
-    "key": "alt+v u",
+    "key": "alt+SUI_选择模式 e",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -986,17 +981,17 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v n u",
+    "key": "alt+SUI_选择模式 SUI_小左 e",
     "command": "cursorTopSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v o u",
+    "key": "alt+SUI_选择模式 SUI_小右 e",
     "command": "cursorBottomSelect",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v i u",
+    "key": "alt+SUI_选择模式 SUI_对象内部 e",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1007,7 +1002,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+v a u",
+    "key": "alt+SUI_选择模式 SUI_对象外部 e",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1020,7 +1015,7 @@
   //mod:delete       d
   // word
   {
-    "key": "alt+d w",
+    "key": "alt+SUI_删除 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "commands": [
@@ -1038,7 +1033,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d n w",
+    "key": "alt+SUI_删除 SUI_小左 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1049,7 +1044,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d o w",
+    "key": "alt+SUI_删除 SUI_小右 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1060,7 +1055,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d i w",
+    "key": "alt+SUI_删除 SUI_对象内部 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1072,7 +1067,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d a w",
+    "key": "alt+SUI_删除 SUI_对象外部 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1085,7 +1080,7 @@
   },
   // big word
   {
-    "key": "alt+d shift+w",
+    "key": "alt+SUI_删除 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1097,7 +1092,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d n shift+w",
+    "key": "alt+SUI_删除 SUI_小左 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1108,7 +1103,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d o shift+w",
+    "key": "alt+SUI_删除 SUI_小右 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1119,7 +1114,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d i shift+w",
+    "key": "alt+SUI_删除 SUI_对象内部 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1131,7 +1126,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d a shift+w",
+    "key": "alt+SUI_删除 SUI_对象外部 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1144,7 +1139,7 @@
   },
   // paragraphs
   {
-    "key": "alt+d p",
+    "key": "alt+SUI_删除 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1156,7 +1151,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d n p",
+    "key": "alt+SUI_删除 SUI_小左 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1167,7 +1162,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d o p",
+    "key": "alt+SUI_删除 SUI_小右 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1178,7 +1173,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d i p",
+    "key": "alt+SUI_删除 SUI_对象内部 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1190,7 +1185,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d a p",
+    "key": "alt+SUI_删除 SUI_对象外部 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1203,7 +1198,7 @@
   },
   // line
   {
-    "key": "alt+d l",
+    "key": "alt+SUI_删除 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1213,17 +1208,17 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d n l",
+    "key": "alt+SUI_删除 SUI_小左 l",
     "command": "deleteAllLeft",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d o l",
+    "key": "alt+SUI_删除 SUI_小右 l",
     "command": "deleteAllRight",
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d i l",
+    "key": "alt+SUI_删除 SUI_对象内部 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1235,7 +1230,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d a l",
+    "key": "alt+SUI_删除 SUI_对象外部 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1248,7 +1243,7 @@
   },
   // bracket
   {
-    "key": "alt+d b",
+    "key": "alt+SUI_删除 b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1259,7 +1254,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d v b",
+    "key": "alt+SUI_删除 v b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1270,7 +1265,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y v b",
+    "key": "alt+SUI_拷贝 v b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1295,7 +1290,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+d i b",
+    "key": "alt+SUI_删除 SUI_对象内部 b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1306,7 +1301,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d a b",
+    "key": "alt+SUI_删除 SUI_对象外部 b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1317,13 +1312,13 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d r b",
+    "key": "alt+SUI_删除 SUI_对象两边 b",
     "command": "bracketeer.removeBrackets",
     "when": "editorTextFocus",
   },
   // quote
   {
-    "key": "alt+d q",
+    "key": "alt+SUI_删除 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1334,7 +1329,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d n q",
+    "key": "alt+SUI_删除 SUI_小左 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1345,7 +1340,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d o q",
+    "key": "alt+SUI_删除 SUI_小右 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1356,7 +1351,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d i q",
+    "key": "alt+SUI_删除 SUI_对象内部 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1367,7 +1362,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d a q",
+    "key": "alt+SUI_删除 SUI_对象外部 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1383,13 +1378,13 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d r q",
+    "key": "alt+SUI_删除 SUI_对象两边 q",
     "command": "bracketeer.removeQuotes",
     "when": "editorTextFocus",
   },
   // universe
   {
-    "key": "alt+d u",
+    "key": "alt+SUI_删除 u",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1401,7 +1396,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d n u",
+    "key": "alt+SUI_删除 SUI_小左 u",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1412,7 +1407,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d o u",
+    "key": "alt+SUI_删除 SUI_小右 u",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1424,7 +1419,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d i u",
+    "key": "alt+SUI_删除 SUI_对象内部 u",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1436,7 +1431,7 @@
     "when": "editorTextFocus",
   },
   {
-    "key": "alt+d a u",
+    "key": "alt+SUI_删除 SUI_对象外部 u",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1450,7 +1445,7 @@
   //mod:yank       y
   // word
   {
-    "key": "alt+y w",
+    "key": "alt+SUI_拷贝 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1469,7 +1464,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y n w",
+    "key": "alt+SUI_拷贝 SUI_小左 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1487,7 +1482,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y o w",
+    "key": "alt+SUI_拷贝 SUI_小右 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1505,7 +1500,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y i w",
+    "key": "alt+SUI_拷贝 SUI_对象内部 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1524,7 +1519,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y a w",
+    "key": "alt+SUI_拷贝 SUI_对象外部 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1544,7 +1539,7 @@
   },
   // big word
   {
-    "key": "alt+y shift+w",
+    "key": "alt+SUI_拷贝 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1563,7 +1558,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y n shift+w",
+    "key": "alt+SUI_拷贝 SUI_小左 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1581,7 +1576,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y o shift+w",
+    "key": "alt+SUI_拷贝 SUI_小右 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1599,7 +1594,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y i shift+w",
+    "key": "alt+SUI_拷贝 SUI_对象内部 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1618,7 +1613,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y a shift+w",
+    "key": "alt+SUI_拷贝 SUI_对象外部 shift+w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1638,7 +1633,7 @@
   },
   // paragraphs
   {
-    "key": "alt+y p",
+    "key": "alt+SUI_拷贝 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1657,7 +1652,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y n p",
+    "key": "alt+SUI_拷贝 SUI_小左 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1675,7 +1670,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y o p",
+    "key": "alt+SUI_拷贝 SUI_小右 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1693,7 +1688,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y i p",
+    "key": "alt+SUI_拷贝 SUI_对象内部 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1712,7 +1707,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y a p",
+    "key": "alt+SUI_拷贝 SUI_对象外部 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1732,7 +1727,7 @@
   },
   // line
   {
-    "key": "alt+y l",
+    "key": "alt+SUI_拷贝 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1751,7 +1746,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y y",
+    "key": "alt+SUI_拷贝 y",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1770,7 +1765,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y alt+y",
+    "key": "alt+SUI_拷贝 SUI_对象外部lt+y",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1789,7 +1784,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y n l",
+    "key": "alt+SUI_拷贝 SUI_小左 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1807,7 +1802,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y o l",
+    "key": "alt+SUI_拷贝 SUI_小右 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1825,7 +1820,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y i l",
+    "key": "alt+SUI_拷贝 SUI_对象内部 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1844,7 +1839,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y a l",
+    "key": "alt+SUI_拷贝 SUI_对象外部 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1865,7 +1860,7 @@
   },
   // bracket
   {
-    "key": "alt+y b",
+    "key": "alt+SUI_拷贝 b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1883,7 +1878,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y i b",
+    "key": "alt+SUI_拷贝 SUI_对象内部 b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1901,7 +1896,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y a b",
+    "key": "alt+SUI_拷贝 SUI_对象外部 b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1920,7 +1915,7 @@
   },
   // quote
   {
-    "key": "alt+y q",
+    "key": "alt+SUI_拷贝 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1938,7 +1933,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y n q",
+    "key": "alt+SUI_拷贝 SUI_小左 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1956,7 +1951,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y o q",
+    "key": "alt+SUI_拷贝 SUI_小右 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1974,7 +1969,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y i q",
+    "key": "alt+SUI_拷贝 SUI_对象内部 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -1992,7 +1987,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y a q",
+    "key": "alt+SUI_拷贝 SUI_对象外部 q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2016,7 +2011,7 @@
   },
   // universe
   {
-    "key": "alt+y u",
+    "key": "alt+SUI_拷贝 u",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2035,7 +2030,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y n u",
+    "key": "alt+SUI_拷贝 SUI_小左 u",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2053,7 +2048,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y o u",
+    "key": "alt+SUI_拷贝 SUI_小右 u",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2071,7 +2066,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y i u",
+    "key": "alt+SUI_拷贝 SUI_对象内部 u",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2090,7 +2085,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y a u",
+    "key": "alt+SUI_拷贝 SUI_对象外部 u",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2110,7 +2105,7 @@
   },
   //mod:comment  gc
   {
-    "key": "alt+g c",
+    "key": "alt+SUI_直跳 c",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2120,7 +2115,7 @@
     "when": "editorTextFocus && !editorReadonly && editorHasSelection",
   },
   {
-    "key": "alt+g c w",
+    "key": "alt+SUI_直跳 c w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2132,7 +2127,7 @@
     "when": "editorTextFocus && !editorReadonly",
   },
   {
-    "key": "alt+g c b",
+    "key": "alt+SUI_直跳 c b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2143,7 +2138,7 @@
     "when": "editorTextFocus && !editorReadonly",
   },
   {
-    "key": "alt+g c l",
+    "key": "alt+SUI_直跳 c l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2153,7 +2148,7 @@
     "when": "editorTextFocus && !editorReadonly",
   },
   {
-    "key": "alt+g c c",
+    "key": "alt+SUI_直跳 c c",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2164,12 +2159,12 @@
   },
   //mod:copydown cd code format
   {
-    "key": "alt+i",
+    "key": "alt+SUI_小下",
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly && editorHasSelection",
   },
   {
-    "key": "alt+r",
+    "key": "alt+SUI_小上",
     "command": "editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly && editorHasSelection",
   },
@@ -2197,7 +2192,7 @@
   //mod:upercase gu gU CamelCase
   //mod:align    ga
   {
-    "key": "alt+m l",
+    "key": "alt+SUI_移动 l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2213,7 +2208,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m w",
+    "key": "alt+SUI_移动 w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2225,24 +2220,24 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m q",
+    "key": "alt+SUI_移动 q",
     "command": "do what you like",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m b",
+    "key": "alt+SUI_移动 b",
     "command": "do what you like",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m f",
+    "key": "alt+SUI_移动 f",
     "command": "do what you like",
     "when": "editorTextFocus && !editorHasSelection",
   },
   //mod:find s(selection) cw cl cf pw pl pf vw vl vf w l f b q cb cq pb pq vb r vq
   // layer(selection, currentfile, dir, project, vm)      what (quote, bracket, word, line, file) other
   {
-    "key": "alt+m s",
+    "key": "alt+SUI_移动 s",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2259,7 +2254,7 @@
     "when": "editorTextFocus && editorHasSelection",
   },
   {
-    "key": "alt+m c",
+    "key": "alt+SUI_移动 c",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2271,7 +2266,7 @@
     "when": "editorTextFocus && editorHasSelection",
   },
   {
-    "key": "alt+m c w",
+    "key": "alt+SUI_移动 c w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2288,7 +2283,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m r c w",
+    "key": "alt+SUI_移动 r c w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2302,7 +2297,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m c q",
+    "key": "alt+SUI_移动 c q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2320,7 +2315,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m c b",
+    "key": "alt+SUI_移动 c b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2340,7 +2335,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m c l",
+    "key": "alt+SUI_移动 c l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2356,7 +2351,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m d",
+    "key": "alt+SUI_移动 d",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2374,7 +2369,7 @@
     "when": "editorTextFocus && editorHasSelection",
   },
   {
-    "key": "alt+m d w",
+    "key": "alt+SUI_移动 d w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2394,7 +2389,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m d q",
+    "key": "alt+SUI_移动 d q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2418,7 +2413,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m d b",
+    "key": "alt+SUI_移动 d b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2437,7 +2432,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m d l",
+    "key": "alt+SUI_移动 d l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2457,7 +2452,7 @@
   },
   //mp "filesToInclude": "${workspaceFolder}/**",
   {
-    "key": "alt+m p",
+    "key": "alt+SUI_移动 p",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2475,7 +2470,7 @@
     "when": "editorTextFocus && editorHasSelection",
   },
   {
-    "key": "alt+m p w",
+    "key": "alt+SUI_移动 p w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2495,7 +2490,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m p q",
+    "key": "alt+SUI_移动 p q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2519,7 +2514,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m p b",
+    "key": "alt+SUI_移动 p b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2538,7 +2533,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m p l",
+    "key": "alt+SUI_移动 p l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2558,7 +2553,7 @@
   },
   //mv "filesToInclude": "",
   {
-    "key": "alt+m v",
+    "key": "alt+SUI_移动 v",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2576,7 +2571,7 @@
     "when": "editorTextFocus && editorHasSelection",
   },
   {
-    "key": "alt+m v w",
+    "key": "alt+SUI_移动 v w",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2596,7 +2591,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m v q",
+    "key": "alt+SUI_移动 v q",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2620,7 +2615,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m v b",
+    "key": "alt+SUI_移动 v b",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2639,7 +2634,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m v l",
+    "key": "alt+SUI_移动 v l",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2659,7 +2654,7 @@
   },
   // todo df pf vf
   {
-    "key": "alt+m f",
+    "key": "alt+SUI_移动 f",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2672,7 +2667,7 @@
   },
   // symbol sf, sc , s
   {
-    "key": "alt+m s",
+    "key": "alt+SUI_移动 s",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2685,7 +2680,7 @@
   },
   // 
   {
-    "key": "alt+m o f",
+    "key": "alt+SUI_移动 o f",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2697,7 +2692,7 @@
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+m o r",
+    "key": "alt+SUI_移动 o r",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2721,7 +2716,7 @@
   },
   // goto some where
   {
-    "key": "alt+r",
+    "key": "alt+SUI_小上",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2731,12 +2726,12 @@
     "when": "editorFocus && findWidgetVisible",
   },
   {
-    "key": "alt+i",
+    "key": "alt+SUI_小下",
     "command": "editor.action.nextMatchFindAction",
     "when": "editorFocus && findWidgetVisible",
   },
   {
-    "key": "alt+r",
+    "key": "alt+SUI_小上",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2746,7 +2741,7 @@
     "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
   },
   {
-    "key": "alt+r",
+    "key": "alt+SUI_小上",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
@@ -2756,33 +2751,33 @@
     "when": "accessibilityModeEnabled && searchViewletVisible || firstMatchFocus && searchViewletVisible"
   },
   {
-    "key": "alt+i",
+    "key": "alt+SUI_小下",
     "command": "search.focus.nextInputBox",
     "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
   },
   // copy other
   {
-    "key": "alt+y o i", // todo line and column number
+    "key": "alt+SUI_拷贝 SUI_小右 i", // todo line and column number
     "command": "copyFilePath",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y o n",
+    "key": "alt+SUI_拷贝 SUI_小右 n",
     "command": "copy-file-directory.copyFileNameWithExtension",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y o d",
+    "key": "alt+SUI_拷贝 SUI_小右 d",
     "command": "copy-file-directory.copyFileDirectory",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+y o p",
+    "key": "alt+SUI_拷贝 SUI_小右 p",
     "command": "copyFilePath",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+g w",
+    "key": "alt+SUI_直跳 w",
     "command": "editor.action.openLink",
     "when": "editorTextFocus",
   },
@@ -2797,32 +2792,32 @@
     "when": "editorTextFocus && editorLangId == 'go'",
   },
   {
-    "key": "alt+g i",
+    "key": "alt+SUI_直跳 i",
     "command": "editor.action.dirtydiff.next",
     "when": "editorTextFocus && !textCompareEditorActive"
   },
   {
-    "key": "alt+g i",
+    "key": "alt+SUI_直跳 i",
     "command": "workbench.action.editor.nextChange",
     "when": "editorTextFocus && !textCompareEditorActive"
   },
   {
-    "key": "alt+g i",
+    "key": "alt+SUI_直跳 i",
     "command": "workbench.action.compareEditor.nextChange",
     "when": "textCompareEditorVisible"
   },
   {
-    "key": "alt+g r",
+    "key": "alt+SUI_直跳 r",
     "command": "editor.action.dirtydiff.previous",
     "when": "editorTextFocus && !textCompareEditorActive"
   },
   {
-    "key": "alt+g r",
+    "key": "alt+SUI_直跳 r",
     "command": "workbench.action.editor.previousChange",
     "when": "editorTextFocus && !textCompareEditorActive"
   },
   {
-    "key": "alt+g r",
+    "key": "alt+SUI_直跳 r",
     "command": "workbench.action.compareEditor.previousChange",
     "when": "textCompareEditorVisible"
   },

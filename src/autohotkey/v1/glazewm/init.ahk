@@ -15,7 +15,7 @@ Send ^{F2}
 return
 
 ; launch interface
-$^l::
+$^SUI_打开::
 ctrl_l_var := true
 im_current := SUI_CURRENT_IM
 IME_SET(0)
@@ -25,37 +25,37 @@ Sleep 500
 ctrl_l_var := false
 return
 #If (ctrl_l_var)
-  l::
+  SUI_打开::
     ctrl_l_var := false
-    Send ^ll
+    Send ^SUI_打开SUI_打开
   return
-  ^l::
+  ^SUI_打开::
     ctrl_l_var := false
-    Send ^ll
+    Send ^SUI_打开SUI_打开
   return
   v::
     ctrl_l_var := false
-    Send ^lv
+    Send ^SUI_打开v
   return
   h::
     ctrl_l_var := false
-    Send ^lh
+    Send ^SUI_打开h
   return
   f::
     ctrl_l_var := false
-    Send ^lf
+    Send ^SUI_打开f
   return
   w::
     ctrl_l_var := false
-    Send ^lw
+    Send ^SUI_打开w
   return
   r::
     ctrl_l_var := false
-    Send ^lr
+    Send ^SUI_打开r
   return
   c::
     ctrl_l_var := false
-    Send ^lc
+    Send ^SUI_打开c
   return
   n::
   ctrl_l_var := false
@@ -70,7 +70,7 @@ return
 #If
 
 ; quit interface
-$^q::
+$^SUI_关闭::
 ctrl_q_var := true
 Sleep 1000
 ctrl_q_var := false
@@ -89,7 +89,7 @@ return
   ctrl_q_var := false
   Run, python "%SUI_ROOT%\sui\not_implement.py"
   return
-  q::
+  SUI_关闭::
   ctrl_q_var := false
   if WinActive("ahk_exe SnippingTool.exe")
   || WinActive("ahk_exe ScreenToGif.exe")
@@ -97,23 +97,23 @@ return
     Send !{F4}
     return
   }
-  Send ^qq
+  Send ^SUI_关闭SUI_关闭
   return
-  ^q::
+  ^SUI_关闭::
   ctrl_q_var := false
-  Send ^qq
+  Send ^SUI_关闭SUI_关闭
   return
-  t::
+  SUI_标签::
   ctrl_q_var := false
-  Send ^qt
+  Send ^SUI_关闭SUI_标签
   return
-  w::
+  SUI_窗口::
   ctrl_q_var := false
-  Send ^qw
+  Send ^SUI_关闭SUI_窗口
   return
   a::
   ctrl_q_var := false
-  Send ^qa
+  Send ^SUI_关闭a
   return
 return
 #If

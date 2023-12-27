@@ -64,9 +64,9 @@ Contains(arr, str){
 
 global SUI_WM_FALL_THROUGH := false
 ; sui fallthrough interface
-$^f::
+$^SUI_直通::
 if(SUI_WM_FALL_THROUGH){
-  Send ^f
+  Send ^SUI_直通
   return
 }
 SUI_WM_FALL_THROUGH := true
@@ -77,7 +77,7 @@ FallThroughTimer:
   SetTimer, FallThroughTimer, Off
 return
 
-$^+f::
+$^+SUI_直通::
 SUI_WM_FALL_THROUGH := false
-Send ^+f
+Send ^+SUI_直通
 return

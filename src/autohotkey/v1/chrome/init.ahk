@@ -1,23 +1,23 @@
 ; sui backup interface
 #If WinActive("ahk_exe chrome.exe")
-^!w::
+^!SUI_窗口::
 ctrl_alt_w_var := true
 Sleep 1000
 ctrl_alt_w_var := false
 return
-RCtrl & w::
+RCtrl & SUI_窗口::
 ctrl_alt_w_var := true
 Sleep 1000
 ctrl_alt_w_var := false
 return
-AppsKey & w::
+AppsKey & SUI_窗口::
 ctrl_alt_w_var := true
 Sleep 1000
 ctrl_alt_w_var := false
 return
-!l::
+!SUI_打开::
 alt_l_var := true
-Send !l
+Send !SUI_打开
 Sleep 1000
 alt_l_var := false
 return
@@ -39,7 +39,7 @@ return
 #If
 
 #If (alt_l_var and WinActive("ahk_exe chrome.exe"))
-  .::
+  SUI_句号::
   Send ^+p
   return
 #If
