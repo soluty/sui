@@ -59,7 +59,7 @@ binding_modes:
       - command: "binding mode none"
         bindings: ["Control+OemOpenBrackets"]
       - commands: ["exec cmd.exe", "binding mode none"]
-        bindings: ["L"]
+        bindings: ["SUI_S打开"]
       - commands: ["exec cmd.exe", "binding mode none"]
         bindings: ["Control+L"]
       - commands: ["exec %USERPROFILE%/AppData/Local/Programs/utools/uTools.exe", "binding mode none"]
@@ -83,11 +83,11 @@ binding_modes:
       - command: "binding mode none"
         bindings: ["Control+OemOpenBrackets"]
       - commands: ["close", "binding mode none"]
-        binding: "Q"
+        binding: "SUI_S关闭"
       - commands: ["close", "binding mode none"]
-        binding: "T"
+        binding: "SUI_S标签"
       - commands: ["close", "binding mode none"]
-        binding: "W"
+        binding: "SUI_S窗口"
       - commands: ["exit wm"]
         binding: "A"
   - name: "goto"
@@ -105,13 +105,13 @@ binding_modes:
       - command: "binding mode none"
         bindings: ["Control+OemOpenBrackets"]
       - command: "resize height +2%"
-        bindings: ["R", "Up"]
+        bindings: ["SUI_S小上", "Up"]
       - command: "resize height -2%"
-        bindings: ["I", "Down"]
+        bindings: ["SUI_S小下", "Down"]
       - command: "resize width -2%"
-        bindings: ["N", "Left"]
+        bindings: ["SUI_S小左", "Left"]
       - command: "resize width +2%"
-        bindings: ["O", "Right"]
+        bindings: ["SUI_S小右", "Right"]
       - commands: ["toggle maximized", "binding mode none"]
         bindings: ["M"]
       - commands: ["toggle maximized", "binding mode none"]
@@ -129,13 +129,13 @@ binding_modes:
       - command: "binding mode none"
         bindings: ["Control+OemOpenBrackets"]
       - commands: ["move left", "binding mode none"]
-        bindings: ["N"]
+        bindings: ["SUI_S小左"]
       - commands: ["move right", "binding mode none"]
-        bindings: ["O"]
+        bindings: ["SUI_S小右"]
       - commands: ["move up", "binding mode none"]
-        bindings: ["R"]
+        bindings: ["SUI_S小上"]
       - commands: ["move down", "binding mode none"]
-        bindings: ["I"]
+        bindings: ["SUI_S小下"]
       - commands: ["move workspace left", "binding mode none"]
         bindings: ["Left"]
       - commands: ["move workspace right", "binding mode none"]
@@ -193,36 +193,34 @@ binding_modes:
       - command: "binding mode none"
         bindings: ["Control+OemOpenBrackets"]
       - commands: ["focus workspace recent", "binding mode none"]
-        bindings: ["N"]
+        bindings: ["SUI_S小左"]
       - commands: ["focus workspace recent", "binding mode none"]
-        bindings: ["O"]
+        bindings: ["SUI_S小右"]
       - commands: ["binding mode none", "exec %SUI_ROOT%/sui/not_implement.bat"]
         bindings: ["."]
 keybindings:
   - command: "binding mode launch"
-    binding: "Control+L"
+    binding: "Control+SUI_S打开"
   - command: "binding mode quit"
-    binding: "Control+Q"
+    binding: "Control+SUI_S关闭"
   - command: "binding mode goto"
-    binding: "Control+G"
+    binding: "Control+SUI_S直跳"
   - command: "binding mode move"
-    binding: "Control+M"
+    binding: "Control+SUI_S移动"
   - command: "binding mode size"
-    binding: "Control+S"
+    binding: "Control+SUI_S大小"
   - command: "binding mode arrive"
-    binding: "Control+A"
+    binding: "Control+SUI_S去到标签"
   - command: "binding mode tabto"
-    binding: "Control+T"
-  - command: "binding mode goto"
-    binding: "Control+G"
+    binding: "Control+SUI_S跳转"
   - commands: ["focus left"]
-    bindings: ["Control+N"]
+    bindings: ["Control+SUI_S小左"]
   - commands: ["focus right"]
-    bindings: ["Control+O"]
+    bindings: ["Control+SUI_S小右"]
   - commands: ["focus up"]
-    bindings: ["Control+R"]
+    bindings: ["Control+SUI_S小上"]
   - commands: ["focus down"]
-    bindings: ["Control+I"]
+    bindings: ["Control+SUI_S小下"]
   - commands: ["focus workspace prev"]
     bindings: ["Control+F3"]
   - commands: ["focus workspace next"]

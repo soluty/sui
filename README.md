@@ -1,14 +1,23 @@
-Shortcut User Interface    SUI
-Command Line Interface     CLI  ShortCut
-Graphic User Interface     GUI  
-Terminal User Interface    TUI
-Touch,   
-API, SDk, Http, Api
-Prompt ChatUi
+目前世界上最好的全键盘操作电脑软件的跨操作系统解决方案, 学习一次, 处处使用.
 
-learn once, use everywhere.
+它是一套"通用"的跨操作系统的快捷键操作电脑的接口, 主要应用场景是写代码, 也包含其它场景
 
-一套"通用"的跨操作系统的快捷键操作电脑的接口, 主要应用场景是写代码, 也包含其它场景
+它不是一个vim的插件, 也不是一个软件.
+
+## 安装
+1. 克隆仓库, 或者下载本仓库. 目前windows系统上的sui没有任何依赖, 甚至不依赖于git.
+2. 仓库根目录下面有install.bat文件, 右键, 以管理员身份运行,sui会自动把目前所支持的配置安装到你的电脑上\
+
+- 注意: 如果之前已经你已有sui支持软件的配置,sui会自动帮你备份一次,再运行时会把之前的备份删掉,你可以查看sui的各个软件目录下的install.bat脚本来找到你备份配置的地址
+- 原则上sui不会帮忙安装你需要用到的软件, 由于窗口管理器glazewm目前最新的版本release有点bug,无法支持浮动窗口的移动和大小修改, 所以sui目前提供了一个自编译的glazewm的zip, 会在安装时自动解压并放入windows的自启动目录, bug修复完成时会移除这些东西
+- sui目前在vscode和chrome上实现接口会用了一些插件, 需要自行安装
+- 特殊情况: 如果你是像我一样,其它键盘布局的用户, 你需要用管理员权限启动cmd, 并且通过根目录下的 install.bat ${layout}的方式来运行, 目前sui支持norman布局, 是我正在使用的布局, 你可以通过修改配置来增加更多的布局.
+
+## 面向人群
+- 在windows上希望用快捷键提高工作效率的
+- 双手不愿意离开主键盘的
+- 有鼠标手等疾病,希望尽可能少或者不使用鼠标就能完成绝大部分电脑上工作的
+- 觉得全键盘操作很酷,希望用来装b的
 
 ## 键盘语言的进化
 
@@ -16,13 +25,6 @@ learn once, use everywhere.
 - tab, alt
 - vim  hjkl  rino
 - sui  分层
-
-
-## 面向人群
-- 在windows上希望用快捷键提高工作效率的
-- 双手不愿意离开主键盘的
-- 有鼠标手等疾病,希望尽可能少或者不使用鼠标就能完成绝大部分电脑上工作的
-- 觉得全键盘操作很酷,希望用来装b的
 
 ## 为什么要使用sui
 
@@ -59,7 +61,7 @@ session(持久化)   tab和window的集合                     layout
 | --------------        | ------              | -------     | ------ | ------      |
 | 不用                  | hjk                 |             | typ    |             |
 | 保留原有意义          | zxcv                | cv大法      | zxcv   | cv大法      |
-r| 小上 小下 小左 小右   | rino                | 右手        | ikjl   | 右手        |
+| 小上 小下 小左 小右   | rino                | 右手        | ikjl   | 右手        |
 | 大上 大下 大左 大右   | dest                | 左手        | edsf   | 左手        |
 | 编辑                  | e                   | edit        | e      | edit        |
 | 新增                  | l                   | launch      | o      | open        |
@@ -78,3 +80,6 @@ r| 小上 小下 小左 小右   | rino                | 右手        | ikjl   
 | 任意键,查找按键       | .                   | 正则        | .      | 正则        |
 | leader键              | , ctrl ctrl+alt alt |             |        |             |
 
+## 具体的接口解释
+
+[sui.md]

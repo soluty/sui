@@ -1,41 +1,41 @@
 #If (!ctrl_w_var_sui and WinActive("ahk_exe Explorer.EXE"))
-!y::
+!SUI_拷贝::
 alt_y_var := true
 Sleep 1000
 alt_y_var := false
 return
-!n:: ; goto sidebar
+!SUI_小左:: ; goto sidebar
 Send ^f
 Send ^f
 Send ^+f
 Send {Tab}
 return
-!o::
+!SUI_小右::
 Send ^f
 Send ^e
 Send ^+f
 Sleep 100
 Send {Down}
 return
-!s::
+!SUI_大小::
 Send ^f
 Send ^f
 Send ^+f
 return
-!g::
+!SUI_直跳::
 alt_g_var := true
 Sleep 1000
 alt_g_var := false
 return
-!l::
+!SUI_打开::
 alt_l_var := true
 Sleep 1000
 alt_l_var := false
 return
-!r::
+!SUI_小上::
 Send !{Up}
 return
-!i::
+!SUI_小下::
 Send {Enter}
 return
 #IfWinActive
@@ -56,15 +56,15 @@ return
 #If
 
 #If (alt_g_var and WinActive("ahk_exe Explorer.EXE"))
-  n::
+  SUI_小左::
   alt_g_var := false
   Send !{Left}
   return
-  o::
+  SUI_小右::
   alt_g_var := false
   Send !{Right}
   return
-  .::
+  SUI_句号::
   alt_g_var := false
   Send !{d}!{Down}
   return
