@@ -2757,22 +2757,22 @@
   },
   // copy other
   {
-    "key": "alt+SUI_拷贝 SUI_小右 i", // todo line and column number
-    "command": "copyFilePath",
+    "key": "alt+SUI_拷贝 o i",
+    "command": "copy-filepath-with-line-number",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+SUI_拷贝 SUI_小右 n",
+    "key": "alt+SUI_拷贝 o n",
     "command": "copy-file-directory.copyFileNameWithExtension",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+SUI_拷贝 SUI_小右 d",
+    "key": "alt+SUI_拷贝 o d",
     "command": "copy-file-directory.copyFileDirectory",
     "when": "editorTextFocus && !editorHasSelection",
   },
   {
-    "key": "alt+SUI_拷贝 SUI_小右 p",
+    "key": "alt+SUI_拷贝 o p",
     "command": "copyFilePath",
     "when": "editorTextFocus && !editorHasSelection",
   },
@@ -2830,5 +2830,10 @@
     "key": "alt+shift+e",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorTextFocus && editorHasSelection",
+  },
+  {
+    "key": "alt+SUI_直跳 f",
+    "command": "seito-openfile.openFileFromText",
+    "when": "editorTextFocus",
   },
 ]
