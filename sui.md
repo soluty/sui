@@ -239,17 +239,15 @@ alt+小左,alt+小右 选中状态中光标位置的切换.
 
 1. 需要对对象进行的操作
 
-| 描述                                    | 对应字母       |
-| --------------                          | -------------- |
-| 跳转(to)                                | t              |
-| 选择(visual)                            | v              |
-| 删除(delete)                            | d              |
-| 复制(yank)                              | y              |
-| 注释(comment)                           | gc             |
-| 对齐(align)                             | ga             |
-| 行选择(选中对象以后,再选中对象所在的行) | v              |
-| 从剪切板替换                            | zr             |
-| 其它操作(other)                         | z()或者co()    |
+| 描述            | 对应字母                |
+| --------------  | --------------          |
+| 跳转(to)        | t                       |
+| 选择(visual)    | v                       |
+| 删除(delete)    | d                       |
+| 复制(yank)      | y                       |
+| 注释(comment)   | gc                      |
+| 对齐(align)     | ga                      |
+| 其它操作(other) | z()或者co()             |
 
 ga, gs, gu, gU
 
@@ -264,10 +262,10 @@ ga, gs, gu, gU
 | 引号               | q        |
 | 括号               | b        |
 | tag                | t        |
-| (整个文档)universe | u        |
+| (整个文档)(entire) | e        |
 | function           | f        |
 | search             | s        |
-| search add         | S        |
+| treesitter         | m        |
 
 3. sui中对象的范围
 
@@ -294,9 +292,10 @@ leader+mr 作为替换的起手势(replace)
 | --------------            | -------- |
 | 关标选中的范围(selection) | s        |
 | 当前的函数(function)      | f        |
-| 当前文件(currentfile)     | c        |
+| 段落(paragragh)           | p        |
+| 当前文件(entirefile)      | e        |
 | 当前目录(dir)             | d        |
-| 当前工程(project)         | p        |
+| 当前工程(root)            | r        |
 | 整个电脑(vm)              | v        |
 
 2. 查找的对象(范围)
@@ -304,10 +303,10 @@ leader+mr 作为替换的起手势(replace)
 | 描述                      | 对应字母 |
 | --------------            | -------- |
 | 光标所在单词              | w        |
+| 光标所在大单词            | W        |
 | 引号内容                  | q        |
 | 括号内容                  | b        |
 | 行内内容(不知道查什么)    | l        |
-| 括号内容                  | b        |
 | 符号(symbol)(func, const) | s        |
 | 文件(file)                | f        |
 | other                     | o(字母)  |
