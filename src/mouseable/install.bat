@@ -7,7 +7,12 @@ if not exist "%APPDATA%\mouseable\configs" (
 )
 
 if exist "%APPDATA%\mouseable\configs\qwerty-wasd.json" (
-  del "%APPDATA%\mouseable\configs\qwerty-wasd.json.bak"
-  move "%APPDATA%\mouseable\configs\qwerty-wasd.json"  "%APPDATA%\mouseable\configs\qwerty-wasd.json.bak"
+  if not exist "%APPDATA%\mouseable\configs\qwerty-wasd.json.bak" (
+    echo sui find there is mouseable's original config, backup it.
+    move "%APPDATA%\mouseable\configs\qwerty-wasd.json" "%APPDATA%\mouseable\configs\qwerty-wasd.json.bak"
+  ) else (
+    echo mouseable has a backup file, skip backup.
+  ) 
+  del "%APPDATA%\mouseable\configs\qwerty-wasd.json"
 )
-mklink "%APPDATA%\mouseable\configs\qwerty-wasd.json"  "%xdir%\config.json"
+mklink "%APPDATA%\mouseable\configs\qwerty-wasd.json" "%xdir%\config.json"

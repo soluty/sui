@@ -8,7 +8,12 @@ if not exist "%USERPROFILE%\AppData\Roaming\TouchCursor" (
 )
 
 if exist "%USERPROFILE%\AppData\Roaming\TouchCursor\settings.cfg" (
-  del "%USERPROFILE%\AppData\Roaming\TouchCursor\settings.cfg.bak"
-  move "%USERPROFILE%\AppData\Roaming\TouchCursor\settings.cfg" "%USERPROFILE%\AppData\Roaming\TouchCursor\settings.cfg.bak"
+  if not exist "%USERPROFILE%\AppData\Roaming\TouchCursor\settings.cfg.bak" (
+    echo sui find there is TouchCursor's original config, backup it.
+    move "%USERPROFILE%\AppData\Roaming\TouchCursor\settings.cfg" "%USERPROFILE%\AppData\Roaming\TouchCursor\settings.cfg.bak"
+  ) else (
+    echo TouchCursor has a backup file, skip backup.
+  ) 
+  del "%USERPROFILE%\AppData\Roaming\TouchCursor\settings.cfg"
 )
 mklink "%USERPROFILE%\AppData\Roaming\TouchCursor\settings.cfg" "%xdir%settings_%layout%.cfg"
