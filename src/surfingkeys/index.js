@@ -121,7 +121,7 @@ util.isDevToolsOpen = () => {
 }
 
 const actions = {
-  quitCurrentTab: function () {
+  quitCurrentTab: function() {
     RUNTIME("closeTab")
   },
 }
@@ -395,13 +395,13 @@ maps.global = [
     description: "focus tab right",
   },
   {
-    mode:"nv",
+    mode: "nv",
     alias: "<Ctrl+Alt+i>",
     map: "n",
     description: "focus tab right",
   },
   {
-    mode:"nv",
+    mode: "nv",
     alias: "<Ctrl+Alt+r>",
     map: "N",
     description: "focus tab right",
@@ -491,7 +491,7 @@ maps.global = [
   {
     mode: "niv",
     alias: "<Ctrl-Alt-l>t",
-    callback: function () {
+    callback: function() {
       tabOpenLink("www.bilibili.com")
     },
   },
@@ -503,7 +503,7 @@ maps.global = [
   },
   {
     alias: "lt",
-    callback: function () {
+    callback: function() {
       tabOpenLink("www.bilibili.com")
     },
   },
@@ -589,8 +589,13 @@ maps.global = [
   },
   {
     mode: "nv",
+    alias: "gg",
+    callback: () => Front.openOmnibar({ type: "History" }),
+  },
+  {
+    mode: "nv",
     alias: "sz",
-    callback: function () {
+    callback: function() {
       var el = document.documentElement
       if (document.fullscreenElement) {
         document.exitFullscreen()
@@ -601,8 +606,8 @@ maps.global = [
   },
   {
     mode: "niv",
-    alias: "<Ctrl+Alt+s>`z",
-    callback: function () {
+    alias: "<Ctrl+Alt+s>z",
+    callback: function() {
       var el = document.documentElement
       if (document.fullscreenElement) {
         document.exitFullscreen()
