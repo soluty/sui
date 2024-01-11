@@ -21,7 +21,7 @@ GetWindowInfo(hwnd) {
   WinGet, processPath, ProcessPath, ahk_id %hwnd%
   WinGet, processName, ProcessName, ahk_id %hwnd%
   WinGetPos, x, y, width, height, ahk_id %hwnd%
-  info = 窗口标题：%title%`n窗口类名：%class%`n窗口位置：%x%, %y%`n窗口尺寸：%width%x%height%`n所属进程：%processName%`n进程路径：%processPath%
+  info = wtitle：%title%`nwclass：%class%`nwpos：%x%, %y%`nwsize：%width%x%height%`nwprocess：%processName%`nwpass：%processPath%
   Clipboard := info
 }
 
